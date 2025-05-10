@@ -30,7 +30,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/palm_lower.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/palm_lower.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -39,7 +39,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/palm_lower.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/palm_lower.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -97,7 +97,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/mcp_joint.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/mcp_joint.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -106,7 +106,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/mcp_joint.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/mcp_joint.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -151,7 +151,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -160,7 +160,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -202,7 +202,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/dip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/dip.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -211,7 +211,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/dip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/dip.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -253,7 +253,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_base_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_base_tac3d.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -262,7 +262,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -290,7 +290,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_base_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_base_tac3d.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -299,7 +299,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -341,7 +341,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -350,7 +350,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -392,7 +392,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/thumb_pip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/thumb_pip.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -401,7 +401,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/thumb_pip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/thumb_pip.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -443,7 +443,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/thumb_dip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/thumb_dip.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -452,7 +452,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/thumb_dip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/thumb_dip.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -494,7 +494,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/thumb_fingertip_base_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/thumb_fingertip_base_tac3d.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -503,7 +503,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -531,7 +531,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/thumb_fingertip_base_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/thumb_fingertip_base_tac3d.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -540,7 +540,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -582,7 +582,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/mcp_joint.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/mcp_joint.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -591,7 +591,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/mcp_joint.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/mcp_joint.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -633,7 +633,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -642,7 +642,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -684,7 +684,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/dip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/dip.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -693,7 +693,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/dip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/dip.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -735,7 +735,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_base_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_base_tac3d.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -744,7 +744,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -772,7 +772,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_base_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_base_tac3d.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -781,7 +781,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -823,7 +823,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/mcp_joint.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/mcp_joint.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -832,7 +832,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/mcp_joint.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/mcp_joint.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -875,7 +875,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -884,7 +884,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/pip.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -926,7 +926,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/dip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/dip.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -935,7 +935,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/dip.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/dip.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -977,7 +977,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_base_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_base_tac3d.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -986,7 +986,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
           </mesh>
         </geometry>
       </collision> -->
@@ -1014,7 +1014,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_base_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_base_tac3d.obj</uri>
           </mesh>
         </geometry>
       </visual>
@@ -1023,7 +1023,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/leap_hand_description/urdf/leap_hand/mesh/simple_obj/fingertip_tac3d.obj</uri>
           </mesh>
         </geometry>
       </visual>

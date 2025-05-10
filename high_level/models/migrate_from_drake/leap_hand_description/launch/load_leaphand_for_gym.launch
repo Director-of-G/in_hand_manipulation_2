@@ -1,0 +1,7 @@
+<launch>
+  <!-- Launch the URDF model -->
+  <arg name="urdf_file" default="$(find my_robot_description)/urdf/leaphand_with_object.urdf.xacro" />
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg urdf_file)" />
+
+
+</launch>

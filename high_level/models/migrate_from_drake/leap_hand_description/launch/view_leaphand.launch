@@ -1,0 +1,20 @@
+<launch>
+
+  <arg name="rviz_file" default="view_leaphand.rviz" />
+  <arg name="use_slider" default="true" />
+  <arg name="use_rviz" default="true" />
+
+
+  <include file="$(find my_robot_description)/launch/load_leaphand.launch" />
+
+  <group if="$(arg use_slider)">
+    <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui"
+      type="joint_state_publisher_gui" />
+  </group>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <node if="$(arg use_rviz)" name="rviz" pkg="rviz" type="rviz"
+    args="-d $(find my_robot_description)/rviz/$(arg rviz_file)" />
+
+</launch>

@@ -1,0 +1,49 @@
+<mujoco model="leap_hand">
+    <compiler angle="radian" />
+
+    <option gravity="0 0 0" />
+
+    <default>
+        <joint damping="0.2" />
+        <position kp="1" kv="0.01" />
+    </default>
+
+    <!-- include the description of the hand body -->
+    <include file="./leaphand.xml" />
+
+    <contact>
+        <exclude body1="palm_lower" body2="mcp_joint" />
+        <exclude body1="palm_lower" body2="mcp_joint_2" />
+        <exclude body1="palm_lower" body2="mcp_joint_3" />
+        <exclude body1="palm_lower" body2="pip_4" />
+        <exclude body1="palm_lower" body2="thumb_dip" />
+        <exclude body1="palm_lower" body2="thumb_pip" />
+        <exclude body1="mcp_joint" body2="pip" />
+        <exclude body1="pip" body2="dip" />
+        <exclude body1="mcp_joint" body2="dip" />
+    </contact>
+
+    <actuator>
+        <position joint="joint_1" name="actuator_1" />
+        <position joint="joint_0" name="actuator_0" />
+        <position joint="joint_2" name="actuator_2" />
+        <position joint="joint_3" name="actuator_3" />
+
+        <position joint="joint_5" name="actuator_5" />
+        <position joint="joint_4" name="actuator_4" />
+        <position joint="joint_6" name="actuator_6" />
+        <position joint="joint_7" name="actuator_7" />
+
+        <position joint="joint_9" name="actuator_9" />
+        <position joint="joint_8" name="actuator_8" />
+        <position joint="joint_10" name="actuator_10" />
+        <position joint="joint_11" name="actuator_11" />
+
+        <position joint="joint_12" name="actuator_12" />
+        <position joint="joint_13" name="actuator_13" />
+        <position joint="joint_14" name="actuator_14" />
+        <position joint="joint_15" name="actuator_15" />
+    </actuator>
+
+
+</mujoco>

@@ -1,0 +1,18 @@
+<mujoco model="cylinder">
+    <compiler angle="radian" />
+
+    <asset>
+        <mesh name="cylinder" file="cylinder_s.stl" scale="0.001 0.001 0.001" />
+    </asset>
+
+    <worldbody>
+        <body name="object">
+            <geom pos="-0.03 -0.04 -0.03" type="mesh" mesh="cylinder" rgba="0.5 0.5 0.5 0.5"
+                friction="1 0.005 0.0001" />
+            <site name="QR_code_pos" pos="0 0.04 0" type="sphere" size="0.005" rgba="1 0 0 1"
+            />
+            <!-- conaffinity="0", contype="0": disable collision -->
+        </body>
+    </worldbody>
+
+</mujoco>
