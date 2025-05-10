@@ -1,0 +1,103 @@
+<mujoco model="leap_hand">
+  <compiler angle="radian"/>
+  <asset>
+    <mesh name="palm_lower" file="palm_lower.stl"/>
+    <mesh name="mcp_joint" file="mcp_joint.stl"/>
+    <mesh name="pip" file="pip.stl"/>
+    <mesh name="dip" file="dip.stl"/>
+    <mesh name="fingertip_base" file="fingertip_base.stl"/>
+    <mesh name="thumb_pip" file="thumb_pip.stl"/>
+    <mesh name="thumb_dip" file="thumb_dip.stl"/>
+    <mesh name="thumb_fingertip_base" file="thumb_fingertip_base.stl"/>
+    <mesh name="fingertip_custom" file="fingertip_custom.stl"/>
+  </asset>
+  <worldbody>
+    <body name="palm_lower">
+    <geom pos="-0.0200952 -0.0257578 0.0347224" quat="0 1 0 0" type="mesh" rgba="0.603922 0.14902 0.14902 1" mesh="palm_lower"/>
+    <body name="mcp_joint" pos="-0.00709525 -0.0230578 0.0187224" quat="-0.5 0.5 0.5 0.5">
+      <inertial pos="0 0 0" quat="0.388585 0.626468 -0.324549 0.592628" mass="0.044" diaginertia="1.47756e-05 1.31982e-05 6.0802e-06"/>
+      <joint name="joint_1" pos="0 0 0" axis="0 0 -1" limited="true" range="-0.314 2.23"/>
+      <geom pos="0.0084069 0.00776624 0.0146574" quat="1 0 0 0" type="mesh" rgba="0.866667 0.866667 0.0509804 1" mesh="mcp_joint"/>
+      <body name="pip" pos="-0.0122 0.0381 0.0145" quat="0.5 -0.5 -0.5 0.5">
+        <inertial pos="0 0 0" quat="0.709913 0.704273 -0.000363156 0.00475427" mass="0.032" diaginertia="4.7981e-06 4.23406e-06 2.86184e-06"/>
+        <joint name="joint_0" pos="0 0 0" axis="0 0 -1" limited="true" range="-1.047 1.047"/>
+        <geom pos="0.00964336 0.0003 0.000784034" quat="0.5 -0.5 -0.5 -0.5" type="mesh" rgba="0.74902 0.74902 0.74902 1" mesh="pip"/>
+        <body name="dip" pos="0.015 0.0143 -0.013" quat="0.5 0.5 -0.5 0.5">
+          <inertial pos="0 0 0" quat="-0.252689 0.659216 0.238844 0.666735" mass="0.037" diaginertia="6.68256e-06 6.24841e-06 5.02002e-06"/>
+          <joint name="joint_2" pos="0 0 0" axis="0 0 -1" limited="true" range="-0.506 1.885"/>
+          <geom pos="0.0211334 -0.00843212 0.00978509" quat="0 -1 0 0" type="mesh" rgba="0.866667 0.866667 0.0509804 1" mesh="dip"/>
+          <body name="fingertip" pos="-4.08806e-09 -0.0361 0.0002">
+            <inertial pos="0 -1.0625e-10 9.0625e-11" quat="0.706755 0.706755 0.0223155 0.0223155" mass="0.016" diaginertia="3.37537e-06 2.8631e-06 1.54883e-06"/>
+            <joint name="joint_3" pos="0 0 0" axis="0 0 -1" limited="true" range="-0.366 2.042"/>
+            <geom pos="0.0132864 -0.00611424 0.0145" quat="0 1 0 0" type="mesh" rgba="0.866667 0.866667 0.0509804 1" mesh="fingertip_base"/>
+            <geom pos="0 -0.017 0.0145" quat="0 -0.707107 0 0.707107" type="mesh" rgba="0.866667 0.866667 0.0509804 1" mesh="fingertip_custom"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="mcp_joint_2" pos="-0.00709525 0.0223922 0.0187224" quat="-0.5 0.5 0.5 0.5">
+      <inertial pos="0 0 0" quat="0.388585 0.626468 -0.324549 0.592628" mass="0.044" diaginertia="1.47756e-05 1.31982e-05 6.0802e-06"/>
+      <joint name="joint_5" pos="0 0 0" axis="0 0 -1" limited="true" range="-0.314 2.23"/>
+      <geom pos="0.0084069 0.00776624 0.0146574" quat="1 0 0 0" type="mesh" rgba="0.866667 0.866667 0.0509804 1" mesh="mcp_joint"/>
+      <body name="pip_2" pos="-0.0122 0.0381 0.0145" quat="0.5 -0.5 -0.5 0.5">
+        <inertial pos="0 0 0" quat="0.709913 0.704273 -0.000363156 0.00475427" mass="0.032" diaginertia="4.7981e-06 4.23406e-06 2.86184e-06"/>
+        <joint name="joint_4" pos="0 0 0" axis="0 0 -1" limited="true" range="-1.047 1.047"/>
+        <geom pos="0.00964336 0.0003 0.000784034" quat="0.5 -0.5 -0.5 -0.5" type="mesh" rgba="0.74902 0.74902 0.74902 1" mesh="pip"/>
+        <body name="dip_2" pos="0.015 0.0143 -0.013" quat="0.5 0.5 -0.5 0.5">
+          <inertial pos="0 0 0" quat="-0.252689 0.659216 0.238844 0.666735" mass="0.037" diaginertia="6.68256e-06 6.24841e-06 5.02002e-06"/>
+          <joint name="joint_6" pos="0 0 0" axis="0 0 -1" limited="true" range="-0.506 1.885"/>
+          <geom pos="0.0211334 -0.00843212 0.00978509" quat="0 -1 0 0" type="mesh" rgba="0.866667 0.866667 0.0509804 1" mesh="dip"/>
+          <body name="fingertip_2" pos="0 -0.0361 0.0002">
+            <inertial pos="0 -1.0625e-10 9.0625e-11" quat="0.706755 0.706755 0.0223155 0.0223155" mass="0.016" diaginertia="3.37537e-06 2.8631e-06 1.54883e-06"/>
+            <joint name="joint_7" pos="0 0 0" axis="0 0 -1" limited="true" range="-0.366 2.042"/>
+            <geom pos="0.0132864 -0.00611424 0.0145" quat="0 1 0 0" type="mesh" rgba="0.866667 0.866667 0.0509804 1" mesh="fingertip_base"/>
+            <geom pos="0 -0.017 0.0145" quat="0 -0.707107 0 0.707107" type="mesh" rgba="0.866667 0.866667 0.0509804 1" mesh="fingertip_custom"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="mcp_joint_3" pos="-0.00709525 0.0678422 0.0187224" quat="-0.5 0.5 0.5 0.5">
+      <inertial pos="0 0 0" quat="0.388585 0.626468 -0.324549 0.592628" mass="0.044" diaginertia="1.47756e-05 1.31982e-05 6.0802e-06"/>
+      <joint name="joint_9" pos="0 0 0" axis="0 0 -1" limited="true" range="-0.314 2.23"/>
+      <geom pos="0.0084069 0.00776624 0.0146574" quat="1 0 0 0" type="mesh" rgba="0.866667 0.866667 0.0509804 1" mesh="mcp_joint"/>
+      <body name="pip_3" pos="-0.0122 0.0381 0.0145" quat="0.5 -0.5 -0.5 0.5">
+        <inertial pos="0 0 0" quat="0.709913 0.704273 -0.000363156 0.00475427" mass="0.032" diaginertia="4.7981e-06 4.23406e-06 2.86184e-06"/>
+        <joint name="joint_8" pos="0 0 0" axis="0 0 -1" limited="true" range="-1.047 1.047"/>
+        <geom pos="0.00964336 0.0003 0.000784034" quat="0.5 -0.5 -0.5 -0.5" type="mesh" rgba="0.74902 0.74902 0.74902 1" mesh="pip"/>
+        <body name="dip_3" pos="0.015 0.0143 -0.013" quat="0.5 0.5 -0.5 0.5">
+          <inertial pos="0 0 0" quat="-0.252689 0.659216 0.238844 0.666735" mass="0.037" diaginertia="6.68256e-06 6.24841e-06 5.02002e-06"/>
+          <joint name="joint_10" pos="0 0 0" axis="0 0 -1" limited="true" range="-0.506 1.885"/>
+          <geom pos="0.0211334 -0.00843212 0.00978509" quat="0 -1 0 0" type="mesh" rgba="0.866667 0.866667 0.0509804 1" mesh="dip"/>
+          <body name="fingertip_3" pos="0 -0.0361 0.0002">
+            <inertial pos="0 -1.0625e-10 9.0625e-11" quat="0.706755 0.706755 0.0223155 0.0223155" mass="0.016" diaginertia="3.37537e-06 2.8631e-06 1.54883e-06"/>
+            <joint name="joint_11" pos="0 0 0" axis="0 0 -1" limited="true" range="-0.366 2.042"/>
+            <geom pos="0.0132864 -0.00611424 0.0145" quat="0 1 0 0" type="mesh" rgba="0.866667 0.866667 0.0509804 1" mesh="fingertip_base"/>
+            <geom pos="0 -0.017 0.0145" quat="0 -0.707107 0 0.707107" type="mesh" rgba="0.866667 0.866667 0.0509804 1" mesh="fingertip_custom"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="pip_4" pos="-0.0693952 0.00124224 0.0216224" quat="0 0.707107 0 0.707107">
+      <inertial pos="0 0 0" quat="0.709913 0.704273 -0.000363156 0.00475427" mass="0.032" diaginertia="4.7981e-06 4.23406e-06 2.86184e-06"/>
+      <joint name="joint_12" pos="0 0 0" axis="0 0 -1" limited="true" range="-0.349 2.094"/>
+      <geom pos="-0.00535664 0.0003 0.000784034" quat="0.5 -0.5 -0.5 -0.5" type="mesh" rgba="0.74902 0.74902 0.74902 1" mesh="pip"/>
+      <body name="thumb_pip" pos="0 0.0143 -0.013" quat="0.5 0.5 -0.5 0.5">
+        <inertial pos="0 0 0" mass="0.003" diaginertia="5.93e-07 5.49e-07 2.24e-07"/>
+        <joint name="joint_13" pos="0 0 0" axis="0 0 -1" limited="true" range="-0.47 2.443"/>
+        <geom pos="0.0119619 0 -0.0158526" quat="0.707107 0.707107 0 0" type="mesh" rgba="0.866667 0.866667 0.0509804 1" mesh="thumb_pip"/>
+        <body name="thumb_dip" pos="0 0.0145 -0.017" quat="0.707107 -0.707107 0 0">
+          <inertial pos="0 0 0" quat="0.708624 0.704906 0.00637342 0.0303153" mass="0.038" diaginertia="8.48742e-06 7.67823e-06 3.82835e-06"/>
+          <joint name="joint_14" pos="0 0 0" axis="0 0 -1" limited="true" range="-1.2 1.9"/>
+          <geom pos="0.0439687 0.057953 -0.00862868" quat="1 0 0 0" type="mesh" rgba="0.866667 0.866667 0.0509804 1" mesh="thumb_dip"/>
+          <body name="thumb_fingertip" pos="0 0.0466 0.0002" quat="0 0 0 1">
+            <inertial pos="0 -6.12245e-11 -2.95918e-11" quat="0.704308 0.709299 0.00684801 -0.0282727" mass="0.049" diaginertia="2.03883e-05 1.98444e-05 4.32059e-06"/>
+            <joint name="joint_15" pos="0 0 0" axis="0 0 -1" limited="true" range="-1.34 1.88"/>
+            <geom pos="0.0625595 0.0784597 0.0489929" type="mesh" rgba="0.603922 0.14902 0.14902 1" mesh="thumb_fingertip_base"/>
+            <geom pos="0 -0.03 -0.0145" quat="0 -0.707107 0 0.707107" type="mesh" rgba="0.866667 0.866667 0.0509804 1" mesh="fingertip_custom"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    </body>
+  </worldbody>
+</mujoco>

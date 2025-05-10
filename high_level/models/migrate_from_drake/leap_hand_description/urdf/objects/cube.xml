@@ -1,0 +1,9 @@
+<mujoco>
+  <worldbody>
+    <body name="object">
+      <geom name="cube" type="box" size="0.025 0.05 0.035" rgba="0 1 0 1" density="1e3"
+        friction="2 0.005 0.0001" />
+      <!-- <geom name="cube" type="box" size="0.0025 0.005 0.0035" rgba="0 1 0 1" density="1e5"/> -->
+    </body>
+  </worldbody>
+</mujoco>

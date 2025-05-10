@@ -1,0 +1,17 @@
+zeros:
+  joint_1: 1.06
+  joint_0: -0.58
+  joint_2: 1.16
+  joint_3: 1.36
+  joint_12: 0.48
+  joint_13: 1.60
+  joint_14: 1.42
+  joint_15: 1.31
+  joint_5: 0.60
+  joint_4: 0.00
+  joint_6: 0.74
+  joint_7: 1.68
+  joint_9: 1.06
+  joint_8: 0.58
+  joint_10: 1.16
+  joint_11: 1.36

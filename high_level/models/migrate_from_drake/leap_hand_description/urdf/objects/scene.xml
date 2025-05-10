@@ -1,0 +1,17 @@
+<mujoco model="scene">
+    <compiler angle="radian" />
+
+    <asset>
+        <texture name="blue_grid" type="2d" builtin="checker" rgb1=".02 .14 .44" rgb2=".27 .55 1"
+            width="300" height="300" mark="edge" markrgb="1 1 1" />
+        <material name="blue_grid" texture="blue_grid" texrepeat="1 1" texuniform="true"
+            reflectance=".2" />
+    </asset>
+
+    <worldbody>
+        <light pos="0 -0.1 0.5" dir="0 0.2 -1" diffuse="0.7 0.7 0.7" specular="0.3 0.3 0.3"
+            directional="true" castshadow="true" />
+        <geom name="floor" pos="0 0 -0.2" size="0 0 0.05" type="plane" material="blue_grid" />
+    </worldbody>
+
+</mujoco>

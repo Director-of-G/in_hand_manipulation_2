@@ -1,0 +1,35 @@
+<!-- 
+  This file is modified from view_leaphand.launch
+  This file loads and saves joint positions in IsaacGym format
+ -->
+
+<launch>
+
+  <include file="$(find my_robot_description)/launch/load_leaphand_for_gym.launch" />
+
+  <param name="object_type" type="string" value="cube_50mm_new" />
+  <rosparam command="load"
+    file="$(find my_robot_description)/config/default_leap_cube_50mm_v5ccw.yaml" />
+
+  <node
+    name="joint_state_publisher_gui"
+    pkg="joint_state_publisher_gui"
+    type="joint_state_publisher_gui" />
+
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find my_robot_description)/rviz/view_leaphand.rviz" />
+
+  <node
+    name="save_leap_jpos_node"
+    pkg="my_robot_description"
+    type="save_leap_jpos.py" />
+
+</launch>

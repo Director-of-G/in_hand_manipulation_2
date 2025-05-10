@@ -1,0 +1,3 @@
+<mujoco model="cylinder_mujoco">
+    <include file="./cylinder.xml" />
+</mujoco>

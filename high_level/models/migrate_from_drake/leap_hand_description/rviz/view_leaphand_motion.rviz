@@ -1,0 +1,522 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /RobotModel1
+        - /TF1
+        - /TF1/Frames1
+        - /Axes1
+        - /Trajectory1
+      Splitter Ratio: 0.6587677597999573
+    Tree Height: 1106
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Name: Time
+    SyncMode: 0
+    SyncSource: ""
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        dip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        dip_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        dip_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        finger1_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        finger2_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        finger3_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        fingertip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_2_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_3_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mcp_joint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mcp_joint_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mcp_joint_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        palm_lower:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_dip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_fingertip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_fingertip_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_pip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        world:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      Robot Description: robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz/TF
+      Enabled: true
+      Filter (blacklist): ""
+      Filter (whitelist): ""
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        dip:
+          Value: false
+        dip_2:
+          Value: false
+        dip_3:
+          Value: false
+        finger1_tip_center:
+          Value: true
+        finger2_tip_center:
+          Value: true
+        finger3_tip_center:
+          Value: true
+        fingertip:
+          Value: true
+        fingertip_2:
+          Value: false
+        fingertip_2_new:
+          Value: false
+        fingertip_3:
+          Value: false
+        fingertip_3_new:
+          Value: false
+        fingertip_new:
+          Value: true
+        mcp_joint:
+          Value: false
+        mcp_joint_2:
+          Value: false
+        mcp_joint_3:
+          Value: false
+        palm_lower:
+          Value: false
+        pip:
+          Value: false
+        pip_2:
+          Value: false
+        pip_3:
+          Value: false
+        pip_4:
+          Value: false
+        thumb_dip:
+          Value: false
+        thumb_fingertip:
+          Value: false
+        thumb_fingertip_new:
+          Value: false
+        thumb_pip:
+          Value: false
+        thumb_tip_center:
+          Value: true
+        world:
+          Value: true
+      Marker Alpha: 1
+      Marker Scale: 0.20000000298023224
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          palm_lower:
+            mcp_joint:
+              pip:
+                dip:
+                  fingertip:
+                    fingertip_new:
+                      finger1_tip_center:
+                        {}
+            mcp_joint_2:
+              pip_2:
+                dip_2:
+                  fingertip_2:
+                    fingertip_2_new:
+                      finger2_tip_center:
+                        {}
+            mcp_joint_3:
+              pip_3:
+                dip_3:
+                  fingertip_3:
+                    fingertip_3_new:
+                      finger3_tip_center:
+                        {}
+            pip_4:
+              thumb_pip:
+                thumb_dip:
+                  thumb_fingertip:
+                    thumb_fingertip_new:
+                      thumb_tip_center:
+                        {}
+      Update Interval: 0
+      Value: true
+    - Alpha: 1
+      Class: rviz/Axes
+      Enabled: true
+      Length: 1
+      Name: Axes
+      Radius: 0.009999999776482582
+      Reference Frame: <Fixed Frame>
+      Show Trail: false
+      Value: true
+    - Class: moveit_rviz_plugin/Trajectory
+      Color Enabled: false
+      Enabled: true
+      Interrupt Display: false
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        dip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        dip_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        dip_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        finger1_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        finger2_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        finger3_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        fingertip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_2_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_3_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mcp_joint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mcp_joint_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mcp_joint_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        palm_lower:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_dip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_fingertip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_fingertip_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_pip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        world:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Loop Animation: false
+      Name: Trajectory
+      Robot Alpha: 0.5
+      Robot Color: 150; 50; 150
+      Robot Description: robot_description
+      Show Robot Collision: false
+      Show Robot Visual: true
+      Show Trail: false
+      State Display Time: 3x
+      Trail Step Size: 1
+      Trajectory Topic: move_group/display_planned_path
+      Use Sim Time: false
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Default Light: true
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
+      Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 2.4367334842681885
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Field of View: 0.7853981852531433
+      Focal Point:
+        X: 0.08449496328830719
+        Y: -0.0006383369909599423
+        Z: -0.011994162574410439
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 1.2597966194152832
+      Target Frame: <Fixed Frame>
+      Yaw: 4.110378742218018
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1403
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd0000000400000000000001a8000004ddfc020000000bfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000004dd000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb0000003c005400720061006a006500630074006f007200790020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004100ffffff000000010000010f000004ddfc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d000004dd000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e1000001970000000300000a000000003efc0100000002fb0000000800540069006d0065010000000000000a00000003bc00fffffffb0000000800540069006d006501000000000000045000000000000000000000073d000004dd00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Trajectory - Slider:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 2560
+  X: 0
+  Y: 0
