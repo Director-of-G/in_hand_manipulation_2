@@ -53,7 +53,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/custom_objects/meshes/geom_bspline_1.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/custom_objects/meshes/geom_bspline_1.obj</uri>
           </mesh>
         </geometry>
         <material>
@@ -78,7 +78,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/custom_objects/meshes/geom_bspline_1.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/custom_objects/meshes/geom_bspline_1.obj</uri>
           </mesh>
         </geometry>
         <surface>
@@ -96,7 +96,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>package://drake_models/custom_objects/meshes/geom_bspline_1.obj</uri>
+            <uri>package://quasistatic_simulator/yongpeng/models/migrate_from_drake/custom_objects/meshes/geom_bspline_1.obj</uri>
           </mesh>
         </geometry>
         <material>

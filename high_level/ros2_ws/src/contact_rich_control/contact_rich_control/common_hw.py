@@ -6,14 +6,14 @@ from builtin_interfaces.msg import Duration, Time
 
 
 INHAND_HOME = os.environ.get('INHAND_HOME')
-DRAKE_HOME = os.environ.get("DRAKE_HOME")
 QSIM_HOME = os.environ.get("QSIM_HOME")
 
 MODEL_DIR = os.path.join(INHAND_HOME, 'models')
 DDP_SOLVER_DIR = os.path.join(INHAND_HOME, 'ddp')
 OPTIMIZER_DIR = os.path.join(DDP_SOLVER_DIR, 'optimizer')
 
-DEFAULT_MESH_DIR = os.path.join(DRAKE_HOME, "manipulation/models", "leap_hand_description/urdf/leap_hand/mesh/simple_obj")
+# DEFAULT_MESH_DIR = os.path.join(DRAKE_HOME, "manipulation/models", "leap_hand_description/urdf/leap_hand/mesh/simple_obj")
+DEFAULT_MESH_DIR = os.path.join(INHAND_HOME, "migrate_from_drake", "leap_hand_description/urdf/leap_hand/mesh/simple_obj")
 
 QSIM_MODEL_DIR = os.path.join(QSIM_HOME, 'models')
 
