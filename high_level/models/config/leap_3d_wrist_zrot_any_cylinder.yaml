@@ -1,0 +1,135 @@
+obj_joint_name: "cylinder_root_joint"
+
+jnames:
+  thumb: [12, 13, 14, 15]
+  index: [1, 0, 2, 3]
+  middle: [5, 4, 6, 7]
+  ring: [9, 8, 10, 11]
+  # wrist: ['wrist_x', 'wrist_y', 'wrist_z', 'wrist_rx', 'wrist_ry', 'wrist_rz']
+  wrist: ['wrist']    # always the first in the actuated dimensions
+
+jlimits:
+  12: [-.inf, 1.98]
+  14: [-1.2, .inf]
+
+x0:
+  # -------- wrist (0.0) --------
+  # thumb: [1.39, 0.94, -0.37, 0.66]
+  # index: [0.54, -1.05, 1.35, 0.2]
+  # middle: [0.62, 0.0, 0.73, 0.45]
+  # ring: [0.54, 1.05, 1.35, 0.2]
+  # wrist: [0.0]
+  # ----------------------------------------
+
+  # -------- wrist (-pi/6) --------
+  # thumb: [1.61, 0.16, -0.96, 1.17]
+  # index: [0.63, 0.17, 0.9, 0.21]
+  # middle: [0.6, 0.7, 0.32, 1.1]
+  # ring: [0.0, 0.0, 0.0, 0.0]
+  # wrist: [-0.523599]
+  # ----------------------------------------
+
+  # -------- wrist (pi/6) --------
+  thumb: [1.61, 0.16, -0.9, 1.22]
+  index: [0.0, 0.0, 0.0, 0.0]
+  middle: [0.6, -0.48, 0.55, 0.83]
+  ring: [0.73, -0.16, 0.72, 0.28]
+  wrist: [0.523599]
+  # ----------------------------------------
+
+xa_reg:
+  # -------- wrist (0.0) --------
+  # thumb: [1.39, 0.94, -0.37, 0.66]
+  # index: [0.54, -1.05, 1.35, 0.2]
+  # middle: [0.62, 0.0, 0.73, 0.45]
+  # ring: [0.54, 1.05, 1.35, 0.2]
+  # wrist: [0.0]
+  # ----------------------------------------
+
+  # -------- wrist (-pi/6) --------
+  # thumb: [1.61, 0.16, -0.96, 1.17]
+  # index: [0.63, 0.17, 0.9, 0.21]
+  # middle: [0.6, 0.7, 0.32, 1.1]
+  # ring: [0.0, 0.0, 0.0, 0.0]
+  # wrist: [-0.523599]
+  # ----------------------------------------
+
+  # -------- wrist (pi/6) --------
+  thumb: [1.61, 0.16, -0.9, 1.22]
+  index: [0.0, 0.0, 0.0, 0.0]
+  middle: [0.6, -0.48, 0.55, 0.83]
+  ring: [0.73, -0.16, 0.72, 0.28]
+  wrist: [0.523599]
+  # ----------------------------------------
+
+
+#############################
+#     Other parameters      #
+#############################
+
+model_url: 'leap_3d_wrist_zrot_any_cylinder.yml'
+
+nq: 18
+nv: 18
+nu: 17
+nc: 4
+
+q_u_indices: [0]
+dxu: 0.07853
+target_xu: 6.35
+use_target_xu: true
+u_lb: -0.12
+u_ub: 0.12
+
+high_level_frequency: 10
+ddp_execution_scale: 0.5
+force_threshold: 3.0          # N
+desired_force_scale: 1.0     # 1.0
+
+object_dofs:
+  task_spec: 'leap_3d_wrist_zrot_any_cylinder'
+  xyz: []     #
+  rpy: ['rz']    # rz
+
+ddp_params:
+  h: 0.1
+  kappa: 100
+  kappa_exact: 10000
+  T_trajopt: 40
+  T_ctrl: 10
+  auto_diff: false
+  finger_link_names:
+    - fingertip
+    - fingertip_2
+    - fingertip_3
+    - thumb_fingertip
+  object_link_name: cylinder_link
+
+  # weights (mpc)
+  w_u: 1e1
+  w_a:  # wrist, index, thumb, middle, ring
+    # - [0.1, 10, 10, 10, 10, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+    # - [0.1, 10, 10, 10, 10, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+    - [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05]
+    - [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05]
+  w_uT: 1e2
+  # w_aT: [100.0, 10000.0, 10000.0, 10000.0, 10000.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0]
+  w_aT: [100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0]
+
+  # weights (trajopt)
+  TO_w_u: 1e1
+  TO_w_a: 1e-2
+  TO_w_uT: 1e2
+  TO_w_aT: 1e0
+  TO_W_x: 1
+  TO_W_u: 0.04
+  TO_W_xT: 1
+
+  # weights (cost sum)
+  W_X: 1          # stateReg
+  W_U: 0.04       # controlReg
+  W_SC: 0         # selfCollide (5e1)
+  W_J: 1e2        # jointLimits
+  model_url_sc: ''
+
+  warmstart_suffix: leap_wrist_cylinder

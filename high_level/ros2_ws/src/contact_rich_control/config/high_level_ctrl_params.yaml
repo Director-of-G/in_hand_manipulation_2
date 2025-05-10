@@ -1,0 +1,31 @@
+task_file: leap_3d_slider.yaml
+# task_file: leap_3d_planar_rotate.yaml
+# task_file: leap_3d_zrot_any_cylinder.yaml
+# task_file: leap_3d_wrist_zrot_any_cylinder.yaml
+# task_file: leap_3d_open_box.yaml
+# task_file: allegro_3d_sphere.yaml
+
+hand_type: leap # leap or allegro
+
+finger_to_geom_name_map:
+  leap:
+    thumb: leap_hand_right::thumb_fingertip_collision
+    index: leap_hand_right::fingertip_collision
+    middle: leap_hand_right::fingertip_2_collision
+    ring: leap_hand_right::fingertip_3_collision
+  allegro:
+    thumb: allegro_hand_right::thumb_fingertip_collision
+    index: allegro_hand_right::fingertip_collision
+    middle: allegro_hand_right::fingertip_2_collision
+    ring: allegro_hand_right::fingertip_3_collision
+
+finger_to_link_name_map:
+  thumb: thumb_tip_center
+  index: finger1_tip_center
+  middle: finger2_tip_center
+  ring: finger3_tip_center
+
+debug: false
+visualize: true
+
+without_lowlevel: true

@@ -1,0 +1,18 @@
+directives:
+
+- add_model:
+    name: leap_hand_right
+
+    # There are LEAP Hands with different collision models
+    file: package://quasistatic_simulator/yongpeng/models/sdf/leap_3d_4finger_tac3d_simple.sdf
+
+- add_frame:
+    name: world_hand_offset
+    X_PF:
+        base_frame: world
+        translation: [-0.09, 0.038, -0.035]
+        rotation: !Rpy {deg: [0., 180., 0.]}
+
+- add_weld:
+    parent: world_hand_offset
+    child: leap_hand_right::palm_lower

@@ -1,0 +1,113 @@
+#############################
+# For the sphere collisions #
+#############################
+
+# x0:
+#   thumb: [1.19, 1.21, 0.56, 0.67]
+#   index: [0.0, 1.21, 0.43, 0.57]
+#   middle: [0.0, 1.21, 0.43, 0.57]
+#   ring: [0.0, 1.21, 0.43, 0.57]
+
+# xa_reg:
+#   thumb: [1.0, 1.2, 0.93, 0.84]
+#   index: [0.0, 0.95, 1.0, 0.57]
+#   middle: [0.0, 0.95, 1.0, 0.57]
+#   ring: [0.0, 0.95, 1.0, 0.57]
+
+#############################
+# For the cuboid collisions #
+#############################
+
+obj_joint_name: "box_root_joint"
+
+jnames:
+  thumb: [12, 13, 14, 15]
+  index: [1, 0, 2, 3]
+  middle: [5, 4, 6, 7]
+  ring: [9, 8, 10, 11]
+
+jlimits:
+#   0: [-.inf, 0]
+#   4: [-0.1, 0.1]
+#   8: [0, .inf]
+
+x0:
+  thumb: [0.0, 0.0, 0.0, 0.0]
+  index: [0.78, -0.38, 0.75, 0.26]
+  middle: [0.73, 0.0, 0.78, 0.39]
+  ring: [0.78, 0.38, 0.75, 0.26]
+
+xa_reg:
+  thumb: [0.0, 0.0, 0.0, 0.0]
+  index: [0.78, -0.38, 0.75, 0.26]
+  middle: [0.73, 0.0, 0.78, 0.39]
+  ring: [0.78, 0.38, 0.75, 0.26]
+  # ---------------------------------
+
+#############################
+#     Other parameters      #
+#############################
+
+model_url: 'leap_3d_open_box.yml'
+
+nq: 17
+nv: 17
+nu: 16
+nc: 4
+
+q_u_indices: [0]
+dxu: [-0.1]           # planar slide: [0.005, 0.0, 0.0]
+target_xu: [-0.5]     # planar slide: [0.27, 0.0, 0.0]
+use_target_xu: true
+u_lb: -0.12
+u_ub: 0.12
+
+high_level_frequency: 10
+ddp_execution_scale: 0.5     # 0.25
+force_threshold: 3.0          # N
+desired_force_scale: 5     # 1.0
+
+object_dofs:
+  task_spec: 'leap_3d_open_box'
+  xyz: []     #
+  rpy: ['ry']    # rz
+
+ddp_params:
+  h: 0.1
+  kappa: 100
+  kappa_exact: 10000
+  T_trajopt: 40
+  T_ctrl: 10
+  auto_diff: true
+  finger_link_names:
+    - fingertip
+    - fingertip_2
+    - fingertip_3
+    - thumb_fingertip
+  object_link_name: box_link
+
+  # weights (mpc)
+  w_u: 1
+  w_a:
+    - 1e-2
+    - 1e-2
+  w_uT: 1e2
+  w_aT: 1
+
+  # weights (trajopt)
+  TO_w_u: 1
+  TO_w_a: 1e-2
+  TO_w_uT: 1e2
+  TO_w_aT: 1
+  TO_W_x: 1
+  TO_W_u: 1e-2
+  TO_W_xT: 10
+
+  # weights (cost sum)
+  W_X: 1          # stateReg
+  W_U: 0.04       # controlReg
+  W_SC: 0         # selfCollide (5e1)
+  W_J: 0          # jointLimits
+  model_url_sc: ''
+
+  warmstart_suffix: leap_open_box

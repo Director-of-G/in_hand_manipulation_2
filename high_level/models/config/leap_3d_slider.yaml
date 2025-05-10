@@ -1,0 +1,137 @@
+#############################
+# For the sphere collisions #
+#############################
+
+# x0:
+#   thumb: [1.19, 1.21, 0.56, 0.67]
+#   index: [0.0, 1.21, 0.43, 0.57]
+#   middle: [0.0, 1.21, 0.43, 0.57]
+#   ring: [0.0, 1.21, 0.43, 0.57]
+
+# xa_reg:
+#   thumb: [1.0, 1.2, 0.93, 0.84]
+#   index: [0.0, 0.95, 1.0, 0.57]
+#   middle: [0.0, 0.95, 1.0, 0.57]
+#   ring: [0.0, 0.95, 1.0, 0.57]
+
+#############################
+# For the cuboid collisions #
+#############################
+
+obj_joint_name: "cube_root_joint"
+
+jnames:
+  thumb: [12, 13, 14, 15]
+  index: [1, 0, 2, 3]
+  middle: [5, 4, 6, 7]
+  ring: [9, 8, 10, 11]
+
+# jlimits:
+#   0: [-.inf, 0]
+#   4: [-0.1, 0.1]
+#   8: [0, .inf]
+
+x0:
+  # -------- capsule fingertip --------
+  # # thumb: [0.33, 1.39, 1.25, 1.22]
+  # thumb: [0.33, 1.8, 1.25, 1.22]
+  # index: [0.78, -0.38, 0.49, 0.87]
+  # middle: [0.03, 0.0, 1.31, 1.22]
+  # ring: [0.78, 0.38, 0.49, 0.87]
+  # ---------------------------------
+
+  # -------- tac3d fingertip --------
+  # thumb: [0.33, 1.8, 1.25, 1.22]
+  thumb: [-0.35, 0.0, -0.3, -0.4]
+  index: [0.78, -0.38, 0.75, 0.26]
+  middle: [0.73, 0.0, 0.78, 0.39]
+  ring: [0.78, 0.38, 0.75, 0.26]
+  # ---------------------------------
+
+xa_reg:
+  # -------- capsule fingertip --------
+  # # thumb: [0.33, 1.39, 1.25, 1.22]
+  # thumb: [0.33, 1.8, 1.25, 1.22]
+  # index: [0.78, -0.38, 0.49, 0.87]
+  # middle: [0.03, 0.0, 1.31, 1.22]
+  # ring: [0.78, 0.38, 0.49, 0.87]
+  # ---------------------------------
+
+  # -------- tac3d fingertip --------
+  # thumb: [0.33, 1.8, 1.25, 1.22]
+  thumb: [-0.35, 0.0, -0.3, -0.4]
+  index: [0.78, -0.38, 0.75, 0.26]
+  middle: [0.73, 0.0, 0.78, 0.39]
+  ring: [0.78, 0.38, 0.75, 0.26]
+  # ---------------------------------
+
+#############################
+#     Other parameters      #
+#############################
+
+model_url: 'leap_3d_slider.yml'
+
+nq: 19
+nv: 19
+nu: 16
+nc: 4
+
+q_u_indices: [0, 1, 2]
+dxu: [0.005, 0.0, 0.0]           # planar slide: [0.005, 0.0, 0.0]
+target_xu: [0.27, 0.0, 0.0]     # planar slide: [0.27, 0.0, 0.0]
+use_target_xu: true
+u_lb: -0.12
+u_ub: 0.12
+
+high_level_frequency: 10
+ddp_execution_scale: 0.5     # 0.25
+force_threshold: 3.0          # N
+desired_force_scale: 2.5     # 1.0
+
+object_dofs:
+  task_spec: 'leap_3d_slider'
+  xyz: ['y', 'z'] # y, z
+  rpy: ['rx']    # rx
+
+ddp_params:
+  h: 0.1
+  kappa: 100
+  kappa_exact: 10000
+  T_trajopt: 40
+  T_ctrl: 10
+  auto_diff: true
+  finger_link_names:
+    - fingertip
+    - fingertip_2
+    - fingertip_3
+    - thumb_fingertip
+  object_link_name: cube_link
+
+  # weights (mpc)
+  w_u: [1e1, 1e3, 1e2]
+  w_a:
+    - [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+    - [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+  w_uT: [1e2, 1e4, 1e3]
+  w_aT: [10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0]
+
+  # weights (trajopt)
+  TO_w_u: [1e1, 1e1, 1e1]     # [1e1, 1e-1, 1e-1]
+  TO_w_a: 5e-2
+  TO_w_uT: [1e0, 1e1, 1e1]    # [1e0, 1e1, 1e1]
+  TO_w_aT: 1e0
+  TO_W_x: 1
+  TO_W_u: 1e-2
+  TO_W_xT: 10
+
+  # weights (cost sum)
+  W_X: 1          # stateReg
+  W_U: 0.04       # controlReg
+  W_SC: 0         # selfCollide (5e1)
+  W_J: 0          # jointLimits
+  # model_url_sc: 'leap_3d_4finger_tac3d_simple_pinocchio.sdf'    # pinocchio model for self collision
+  model_url_sc: ''
+  # pairs_sc:       # pairs for self collision cost ('_0' specifies the first collision geom)
+  #   - ['fingertip_2_0', 'fingertip_3_0']
+
+  warmstart_suffix: slider_cube_leap

@@ -1,0 +1,107 @@
+obj_joint_name: "sphere_root_joint"
+
+jnames:
+  thumb: [12, 13, 14, 15]
+  index: [0, 1, 2, 3]
+  middle: [4, 5, 6, 7]
+  ring: [8, 9, 10, 11]
+
+jlimits:
+  # # specify [lb, ub] for each joint
+  # 0: [-.inf, 0]
+  # 4: [-0.1, 0.1]
+  # 8: [0, .inf]
+  # specify [lb ,ub] for all joints (the increment from x0 is bounded)
+  delta: [-0.02, 0.02]
+
+x0:
+  thumb: [0.6, 1.95, 1.0, 1.0]
+  index: [0.2, 0.95, 1.0, 1.0]
+  middle: [0.0, 0.6, 1.0, 1.0]
+  ring: [-0.2, 0.95, 1.0, 1.0]
+
+xa_reg:
+  thumb: [0.6, 1.9, 1.0, 1.0]
+  index: [0.1, 1.0, 1.0, 1.0]
+  middle: [0.0, 0.7, 1.0, 1.0]
+  ring: [-0.1, 1.0, 1.0, 1.0]
+
+#############################
+#     Other parameters      #
+#############################
+
+model_url: 'allegro_3d_sphere.yml'
+
+nq: 20
+nv: 19
+nu: 16
+nc: 4
+
+q_u_indices: [0, 1, 2, 3]
+q_rot_indices: [0, 1, 2, 3]        # SO(3) dimensions
+dxu: [0.0, 0.0, 0.0, 0.0]          # same dims as q_u_indices
+dxu_so3: 0.025
+init_xu_so3: [1.0, 0.0, 0.0, 0.0]     # quaternion wxyz
+target_xu: [0.0, 0.0, 0.0, 0.0]       # placeholder, not used
+target_xu_so3: [-0.25     , 0.4330127, -0.4330127,  0.75     ]   # quaternion wxyz
+# target_xu_so3: [0.70710678, 0., 0., 0.70710678]   # quaternion wxyz
+random_target_xu_so3: false
+use_target_xu: true
+u_lb: -0.05
+u_ub: 0.05
+
+high_level_frequency: 10
+ddp_execution_scale: 0.5     # 0.25
+force_threshold: 3.0          # N
+desired_force_scale: 1.0     # 1.0
+force_thres_method: 'scale'
+force_thres_params: [0.01]
+
+object_dofs:
+  task_spec: 'allegro_3d_sphere'
+  quat: true
+  xyz: []
+  rpy: []    # rx, ry, rz
+
+ddp_params:
+  h: 0.1
+  kappa: 100
+  kappa_exact: 10000
+  T_trajopt: 40
+  T_ctrl: 10
+  auto_diff: true
+  finger_link_names:
+    - link_3
+    - link_7
+    - link_11
+    - link_15
+  object_link_name: sphere_link
+
+  # weights (mpc)
+  w_u: 0.0
+  w_a:
+    - 3e0           # 1e0
+    - 3e-2          # 1e-2
+  w_u_so3: 5e1      # 5e1
+  w_uT: 0.0
+  w_aT: 3e3         # 1e3
+  w_uT_so3: 1e3     # 1e3
+
+  # weights (trajopt)
+  TO_w_u: 1e1
+  TO_w_a: 1e-2
+  TO_w_uT: 1e2
+  TO_w_aT: 1e0
+  TO_W_x: 1
+  TO_W_u: 4e-2
+  TO_W_xT: 1
+
+  # weights (cost sum)
+  W_X: 1          # stateReg
+  W_U: 0.04       # controlReg
+  W_U_SO3: 1      # object rotation SO3
+  W_SC: 0         # selfCollide (5e1)
+  W_J: 0          # jointLimits
+  model_url_sc: ''    # pinocchio model for self collision
+
+  warmstart_suffix: allegro_rpy
