@@ -181,3 +181,4 @@ cython_debug/
 # quasistatic simulator
 !high_level/quasistatic_simulator/
 !high_level/quasistatic_simulator/**/*
+**/*.pyc

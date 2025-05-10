@@ -5,8 +5,8 @@ from pydrake.all import (
 )
 from qsim_cpp import QuasistaticSimulatorCpp
 from qsim_cpp import ForwardDynamicsMode
-from action_model import QuasistaticActionModel
-from residual_model import ResidualModelPairCollision, ResidualModelFrameRotation
+from ddp.action_model import QuasistaticActionModel
+from ddp.residual_model import ResidualModelPairCollision, ResidualModelFrameRotation
 from common.common_ddp import DDPSolverParams, convert_array_to_list, convert_quat_to_matrix, normalize_array
 
 

@@ -52,7 +52,7 @@ from pydrake.math import (
 
 from meshcat import transformations as tf
 from common.common_ddp import *
-from residual_model import ResidualModelFrameRotation
+from ddp.residual_model import ResidualModelFrameRotation
 from common.inhand_ddp_helper import InhandReferenceGenerator, ContactTrackReference
 from common.ddp_logger import *
 from common.get_model_path import *

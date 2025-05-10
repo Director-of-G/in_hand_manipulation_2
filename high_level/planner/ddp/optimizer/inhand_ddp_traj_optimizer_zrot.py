@@ -11,7 +11,7 @@ sys.path.append(
 )
 import numpy as np
 
-from ddp_solver import solve_ddp_trajopt_problem, ddp_runner
+from ddp.ddp_solver import solve_ddp_trajopt_problem, ddp_runner
 from common.common_drake import *
 from common.common_ddp import (
     DDPSolverParams,
@@ -22,7 +22,7 @@ from common.common_ddp import (
     load_joint_limits
 )
 
-from reference_generator import ReferenceGeneratorRPY
+from ddp.reference_generator import ReferenceGeneratorRPY
 
 OPTIMIZER_DIR = os.path.dirname(os.path.abspath(__file__))
 WARMSTART_DIR = os.path.join(OPTIMIZER_DIR, 'warmstart')

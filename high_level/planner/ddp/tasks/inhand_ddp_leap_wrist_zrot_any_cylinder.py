@@ -49,8 +49,8 @@ from pydrake.math import (
 
 from meshcat import transformations as tf
 from common.common_ddp import *
-from ddp_solver import solve_ddp_trajopt_problem as solve_ddp_trajopt_unified
-from ddp_solver import ddp_runner as ddp_runner_unified
+from ddp.ddp_solver import solve_ddp_trajopt_problem as solve_ddp_trajopt_unified
+from ddp.ddp_solver import ddp_runner as ddp_runner_unified
 from common.inhand_ddp_helper import InhandDDPVizHelper, ContactTrackReference
 from common.ddp_logger import *
 from common.get_model_path import *
