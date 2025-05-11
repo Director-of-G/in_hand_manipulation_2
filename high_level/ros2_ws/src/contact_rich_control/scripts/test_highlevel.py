@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/home/jyp/anaconda3/envs/inhand/bin/python
 import threading
 import time
 

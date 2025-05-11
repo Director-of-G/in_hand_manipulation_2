@@ -13,7 +13,6 @@
   <depend>rclcpp</depend>
   <depend>rclpy</depend>
   <depend>common_msgs</depend>
-  <depend>dynamixel_hardware</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

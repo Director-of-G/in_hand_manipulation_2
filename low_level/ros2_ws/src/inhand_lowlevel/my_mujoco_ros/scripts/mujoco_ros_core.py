@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/home/jyp/anaconda3/envs/inhand/bin/python
 
 import os
 import threading
