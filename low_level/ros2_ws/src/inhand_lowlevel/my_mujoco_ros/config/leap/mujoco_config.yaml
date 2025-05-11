@@ -1,0 +1,47 @@
+mujoco_ros:
+  ros__parameters:
+    # # pub freq
+    object_state_freq: 100
+    contact_state_freq: 100
+    joint_state_freq: 100
+
+    # # panda
+    # model_url: '/home/yongpeng/.mujoco/mujoco_menagerie/franka_emika_panda/scene.xml'  # Replace with the actual model file path
+    # xml_joint_prefix: joint
+    # urdf_joint_prefix: panda_joint
+    # joint_idx_range: [1, 8]
+    # model_init_qpos: [0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785]
+
+    # # iiwa
+    # model_url: '/home/yongpeng/.mujoco/mujoco_menagerie/kuka_iiwa_14/scene.xml'  # Replace with the actual model file path
+    # xml_joint_prefix: joint
+    # urdf_joint_prefix: iiwa_joint_a
+    # joint_idx_range: [1, 8]
+    # model_init_qpos: [0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785]
+
+    # # leap
+    # pip(leap_link_0) | mcp_joint(1) | dip (2) | fingertip (3)
+    # pip_2(4) | mcp_joint_2(5) | dip_2(6) | fingertip_2(7)
+    # pip_3(8) | mcp_joint_3(9) | dip_3(10) | fingertip_3(11)
+    # pip_4(12) | thumb_pip(13) | thumb_dip(14) | thumb_fingertip(15)
+    model_package: 'leap_hand_custom_description'
+    # model_url: 'urdf/leaphand_xml/scene/leap_with_sphere.xml'
+    # model_url: 'urdf/leaphand_xml/scene/leap_with_fixed_object.xml'
+    # model_url: 'urdf/leaphand_xml/scene/leap_with_box.xml'
+    # model_url: 'urdf/leaphand_xml/scene/leap_with_ycb.xml'
+    xml_joint_prefix: joint_
+    urdf_joint_prefix: joint_
+    object_body_name: object
+    joint_idx_range: [0, 16]
+
+    # # model_init_pos (joint_0 ~ joint_16)
+    # # ours
+    # model_init_qpos: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    # model_init_qpos: [-0.53, 0.41, 1.15, 0.59, 0.0, 0.32, 0.76, 0.88, 0.53, 0.41, 1.15, 0.59, 0.3, 1.39, 0.61, 1.3]
+    # model_init_qpos: [0.0, 0.0, 0.0, 0.0, 0.0, 0.66, 0.65, 0.28, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    # model_init_qpos: [0.0, 0.4345, 0.8090, 0.6935, 0.0, 0.4345, 0.8090, 0.6935, 0.0, 0.4345, 0.8090, 0.6935, 1.79, 0.0, -0.626, 1.22]
+
+    # # mjpc
+    model_url: 'mjcf/leap_with_free_box_mjpc/task.xml'
+    model_init_qpos: [-0.75, 0.5, 0.75, 0.25, 0.0, 0.5, 0.75, 0.25, 0.75, 0.5, 0.75, 0.25, 0.65, 0.9, 0.75, 0.6]
+    object_init_qpos: [0.1, 0.025, 0.035, 1.0, 0.0, 0.0, 0.0]

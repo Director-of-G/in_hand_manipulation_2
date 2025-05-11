@@ -1,0 +1,11 @@
+hand_name: "dom"
+baudrate: 3000000
+device_name: "/dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FT8ISWJ1-if00-port0"
+pub_pos: true
+pub_vel: false
+pub_current: false
+kP: 800
+kI: 100
+kD: 200
+curr_lim: 5000
+start_pos: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

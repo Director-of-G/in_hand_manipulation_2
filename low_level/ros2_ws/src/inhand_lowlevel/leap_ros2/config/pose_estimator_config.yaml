@@ -1,0 +1,49 @@
+leap_3d_slider:
+  offset:
+    obj2tag:
+      xyz: [0.0, 0.33, 0.0]
+      rpy: [3.14159, 0.0, 3.14159]
+    hand2world:
+      xyz: [0.0, -0.14, 0.005]
+      rpy: [1.57080, -1.57080, 0.0]
+  tags: [32]
+
+leap_3d_planar_rotate:
+  offset:
+    obj2tag:
+      xyz: [0.0, 0.18, 0.0]
+      rpy: [3.14159, 0.0, 3.14159]
+    hand2world:
+      xyz: [0.0, -0.1, 0.005]
+      rpy: [1.57080, -1.57080, 0.0]
+  tags: [32]
+
+leap_3d_zrot_any_cylinder:
+  offset:
+    obj2tag:
+      xyz: [-0.08, 0.026, -0.001]
+      rpy: [3.14159, -1.57080, 0.0]
+    hand2world:
+      xyz: [-0.037, -0.13, 0.037]
+      rpy: [1.57080, -1.57080, 0.0]
+  tags: [33, 34]
+
+leap_3d_wrist_zrot_any_cylinder:
+  offset:
+    obj2tag:
+      xyz: [-0.08, 0.026, -0.001]
+      rpy: [3.14159, -1.57080, 0.0]
+    hand2world:
+      xyz: [-0.037, -0.13, 0.037]
+      rpy: [1.57080, -1.57080, 0.0]
+  tags: [33, 34]
+
+leap_3d_open_box:
+  offset:
+    obj2tag:
+      xyz: [0.0, 0.0, 0.0]
+      rpy: [0, -1.57080, 0.0]
+    hand2world:
+      xyz: [0.04, -0.2, 0.14]
+      rpy: [0, 0.0, -1.57080]
+  tags: [35]

@@ -1,0 +1,20 @@
+model_directive: package://quasistatic_simulator/yongpeng/models/yml/robot/leap_3d_4finger_no_palm.yml
+
+robots:
+  -
+    name: leap_hand_right
+    Kp: [200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200]
+
+objects:
+  -
+    name: sphere
+    file: package://quasistatic_simulator/yongpeng/models/sdf/cross_valve_zrot.sdf
+
+quasistatic_sim_params:
+  # gravity: [-6.17, 1.54, -7.72]
+  # gravity: [-2, 0.5, -9.78]
+  gravity: [0, 0, -9.81]
+  nd_per_contact: 4
+  contact_detection_tolerance: 0.1
+  is_quasi_dynamic: True
+  unactuated_mass_scale: 5.

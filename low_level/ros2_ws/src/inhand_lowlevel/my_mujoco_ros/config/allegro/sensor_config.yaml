@@ -1,0 +1,7 @@
+mujoco_ros:
+  ros__parameters:
+    contact_geom_names:
+      - allegro_hand_right::fingertip_collision
+      - allegro_hand_right::fingertip_2_collision
+      - allegro_hand_right::fingertip_3_collision
+      - allegro_hand_right::thumb_fingertip_collision

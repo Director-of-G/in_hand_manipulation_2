@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+
+  <!-- set axis/limit/effort to 0 for unactuated joints -->
+
+  <model name="hand_2d">
+    <!-- for sdf2urdf only -->
+    <!-- <link name="world" /> -->
+
+    <!-- The first hand -->
+    <link name="hand_ghost_x">
+      <inertial>
+        <mass>1.0e-10</mass>
+        <inertia>
+          <ixx>1.0e-12</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.0e-12</iyy>
+          <iyz>0</iyz>
+          <izz>1.0e-12</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <link name="hand">
+      <pose>0 0 0 0 0 0 </pose>
+      <inertial>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>1e-4</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1e-4</iyy>
+          <iyz>0</iyz>
+          <izz>1e-4</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="hand_visual">
+        <geometry>
+          <!-- <cylinder>
+            <length>0.02</length>
+            <radius>0.01</radius>
+          </cylinder> -->
+          <sphere>
+            <radius>0.01</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <diffuse>0.25 0.25 0.25 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="hand_collision">
+        <geometry>
+          <!-- <cylinder>
+            <length>0.02</length>
+            <radius>0.01</radius>
+          </cylinder> -->
+          <sphere>
+            <radius>0.01</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+    </link>
+
+    <joint name="hand_ghost_joint_x" type="prismatic">
+      <parent>world</parent>
+      <child>hand_ghost_x</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <dynamics>
+          <friction>3</friction>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <joint name="hand_ghost_joint_y" type="prismatic">
+      <parent>hand_ghost_x</parent>
+      <child>hand</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <friction>3</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+  </model>
+</sdf>

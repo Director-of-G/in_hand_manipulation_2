@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+
+<!-- 
+    This file is modified from leaphand.urdf.xacro from leap_XL
+    repo (https://github.com/RGMC-XL-team/leap_XL). Note that
+    leap_XL is a ROS1 repository containing our customized
+    leap hand descriptions. We change the mesh dirs here to
+    ROS2 packages.
+ -->
+
+<robot name="leap_hand" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:macro name="leap_hand_custom" params="mesh_dir parent *origin">
+        
+    <!-- using ros -->
+    <!-- <xacro:arg name="package_dir" default="package://my_robot_description" /> -->
+    <!-- using absolute path (for generating urdf)-->
+    <!-- <xacro:arg name="package_dir" default="/home/mingrui/Mingrui/research/project_RGMC_24/RGMC_XL/leap_ws/src/my_robot_description" /> -->
+    <!-- <xacro:arg name="mesh_dir" default="$(arg package_dir)/urdf/leap_hand/mesh/" /> -->
+
+    <!-- specify the mesh_dir -->
+    <!-- <xacro:arg name="mesh_dir" default="" /> -->
+    <!-- <xacro:arg name="mesh_dir" default="package://leap_hand_custom_description/urdf/meshes/" /> -->
+    <!-- <xacro:arg name="mesh_dir"
+    default="/home/mingrui/Mingrui/research/project_RGMC_24/RGMC_XL/leap_ws/src/my_robot_description/urdf/leap_hand/mesh/" /> -->
+    <!-- <xacro:arg name="mesh_dir" default="package://drake_models/leap_description/meshes/" /> -->
+
+    <xacro:include filename="$(find leap_hand_custom_description)/urdf/leap_hand_body.urdf.xacro" />
+    <xacro:leap_hand_body mesh_dir="${mesh_dir}" use_tac3d="false" />
+
+
+    <!-- the links and joints for customized fingertips -->
+    <link name="fingertip_new">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="${mesh_dir}fingertip_custom.stl" />
+            </geometry>
+            <material name="fingertip_material">
+                <color rgba="0.86666666666666669627 0.86666666666666669627 0.050980392156862744391 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="${mesh_dir}fingertip_custom.stl" />
+            </geometry>
+        </collision>
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.0000000001" />
+            <inertia ixx="0.0000000001" ixy="0" ixz="0" iyy="0.0000000001" iyz="0" izz="0.0000000001" />
+        </inertial>
+    </link>
+
+    <link name="fingertip_2_new">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="${mesh_dir}fingertip_custom.stl" />
+            </geometry>
+            <material name="fingertip_material">
+                <color rgba="0.86666666666666669627 0.86666666666666669627 0.050980392156862744391 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="${mesh_dir}fingertip_custom.stl" />
+            </geometry>
+        </collision>
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.0000000001" />
+            <inertia ixx="0.0000000001" ixy="0" ixz="0" iyy="0.0000000001" iyz="0" izz="0.0000000001" />
+        </inertial>
+    </link>
+
+    <link name="fingertip_3_new">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="${mesh_dir}fingertip_custom.stl" />
+            </geometry>
+            <material name="fingertip_material">
+                <color rgba="0.86666666666666669627 0.86666666666666669627 0.050980392156862744391 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="${mesh_dir}fingertip_custom.stl" />
+            </geometry>
+        </collision>
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.0000000001" />
+            <inertia ixx="0.0000000001" ixy="0" ixz="0" iyy="0.0000000001" iyz="0" izz="0.0000000001" />
+        </inertial>
+    </link>
+
+    <link name="thumb_fingertip_new">
+        <visual>
+            <origin xyz="0 0 0 " rpy="0 0 0" />
+            <geometry>
+                <mesh filename="${mesh_dir}fingertip_custom.stl" />
+            </geometry>
+            <material name="fingertip_material">
+                <color rgba="0.86666666666666669627 0.86666666666666669627 0.050980392156862744391 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="${mesh_dir}fingertip_custom.stl" />
+            </geometry>
+        </collision>
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.0000000001" />
+            <inertia ixx="0.0000000001" ixy="0" ixz="0" iyy="0.0000000001" iyz="0" izz="0.0000000001" />
+        </inertial>
+    </link>
+
+    <joint name="finger1_tipbase2tip" type="fixed">
+        <origin xyz="0 -0.017 0.0145" rpy="0 ${pi/2} ${pi}" />
+        <parent link="fingertip" />
+        <child link="fingertip_new" />
+    </joint>
+
+    <joint name="finger2_tipbase2tip" type="fixed">
+        <origin xyz="0 -0.017 0.0145" rpy="0 ${pi/2} ${pi}" />
+        <parent link="fingertip_2" />
+        <child link="fingertip_2_new" />
+    </joint>
+
+    <joint name="finger3_tipbase2tip" type="fixed">
+        <origin xyz="0 -0.017 0.0145" rpy="0 ${pi/2} ${pi}" />
+        <parent link="fingertip_3" />
+        <child link="fingertip_3_new" />
+    </joint>
+
+    <joint name="thumb_tipbase2tip" type="fixed">
+        <origin xyz="0 -0.03 -0.0145" rpy="0 ${pi/2} ${pi}" />
+        <parent link="thumb_fingertip" />
+        <child link="thumb_fingertip_new" />
+    </joint>
+
+
+    <!-- the links and joints for fingertip frames (point contact) -->
+    <link name="finger1_tip_center" />
+    <link name="finger2_tip_center" />
+    <link name="finger3_tip_center" />
+    <link name="thumb_tip_center" />
+
+    <joint name="finger1_tip2center" type="fixed">
+        <origin rpy="0 0 0" xyz="0 0.04 0" />
+        <parent link="fingertip_new" />
+        <child link="finger1_tip_center" />
+    </joint>
+
+    <joint name="finger2_tip2center" type="fixed">
+        <origin rpy="0 0 0" xyz="0 0.04 0" />
+        <parent link="fingertip_2_new" />
+        <child link="finger2_tip_center" />
+    </joint>
+
+    <joint name="finger3_tip2center" type="fixed">
+        <origin rpy="0 0 0" xyz="0 0.04 0" />
+        <parent link="fingertip_3_new" />
+        <child link="finger3_tip_center" />
+    </joint>
+
+    <joint name="thumb_tip2center" type="fixed">
+        <origin rpy="0 0 0" xyz="0 0.04 0" />
+        <parent link="thumb_fingertip_new" />
+        <child link="thumb_tip_center" />
+    </joint>
+
+
+    <!-- the links and joints for world frame -->
+    <!-- <link name="world" /> -->
+    <!-- <joint name="${parent}2hand" type="fixed">
+        <xacro:insert_block name="origin" />
+        <parent link="${parent}" />
+        <child link="palm_lower" />
+    </joint> -->
+
+</xacro:macro>
+
+</robot>

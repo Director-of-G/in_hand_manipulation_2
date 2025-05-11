@@ -182,3 +182,6 @@ cython_debug/
 !high_level/quasistatic_simulator/
 !high_level/quasistatic_simulator/**/*
 **/*.pyc
+
+# generated 100 goal for the rotate sphere task
+!low_level/ros2_ws/src/inhand_lowlevel/leap_ros2/scrpts/journal/data/*.npy 

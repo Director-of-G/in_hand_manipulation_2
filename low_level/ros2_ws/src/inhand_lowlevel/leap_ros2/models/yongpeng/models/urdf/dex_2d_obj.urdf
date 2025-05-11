@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<robot name="box_2d">
+
+  <!-- BOX LINK -->
+  <link name="box_link">
+    <inertial>
+      <mass value="1.0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="3.5e-3" ixy="0" ixz="0" iyy="3.5e-3" iyz="0" izz="7e-3"/>
+    </inertial>
+    <collision name="box_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.2 0.2 0.02"/>
+      </geometry>
+    </collision>
+    <visual name="box_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.2 0.2 0.02"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<robot name="hand_2d">
+
+  <!-- world definition -->
+  <link name="world">
+    <inertial>
+        <mass value="0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+
+  <!-- object definition -->
+  <joint name="box_ghost_joint_x" type="prismatic">
+    <parent link="world"/>
+    <child link="box_ghost_x"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="box_ghost_joint_y" type="prismatic">
+    <parent link="box_ghost_x"/>
+    <child link="box_ghost_y"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="box_ghost_joint_z" type="revolute">
+    <parent link="box_ghost_y"/>
+    <child link="box"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
+  </joint>
+
+  <link name="box_ghost_x">
+    <inertial>
+      <mass value="1.0e-10"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.0e-12" ixy="0" ixz="0" iyy="1.0e-12" iyz="0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  <link name="box_ghost_y">
+    <inertial>
+      <mass value="1.0e-10"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.0e-12" ixy="0" ixz="0" iyy="1.0e-12" iyz="0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+  
+  <link name="box">
+    <inertial>
+      <mass value="1.0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="3.5e-3" ixy="0" ixz="0" iyy="3.5e-3" iyz="0" izz="7e-3"/>
+    </inertial>
+    <collision name="box_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.2 0.2 0.02"/>
+      </geometry>
+    </collision>
+    <visual name="box_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.2 0.2 0.02"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- hand definition -->
+  <joint name="hand_ghost_joint_x" type="prismatic">
+    <parent link="world"/>
+    <child link="hand_ghost_x"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+
+  <joint name="hand_ghost_joint_y" type="prismatic">
+    <parent link="hand_ghost_x"/>
+    <child link="hand"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+  
+  <link name="hand_ghost_x">
+    <inertial>
+      <mass value="1.0e-10"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.0e-12" ixy="0" ixz="0" iyy="1.0e-12" iyz="0" izz="1.0e-12"/>
+    </inertial>
+  </link>
+
+  <link name="hand">
+    <inertial>
+      <mass value="1.0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-4" ixy="0" ixz="0" iyy="1e-4" iyz="0" izz="1e-4"/>
+    </inertial>
+    <collision name="hand_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+    </collision>
+    <visual name="hand_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+    </visual>
+  </link>
+
+</robot>

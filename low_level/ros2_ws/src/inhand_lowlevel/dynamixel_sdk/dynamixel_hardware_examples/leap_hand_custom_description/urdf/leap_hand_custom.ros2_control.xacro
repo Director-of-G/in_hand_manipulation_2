@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="leap_hand_custom_ros2_control" params="name use_dummy:=true P_Gain:=1600 I_Gain:=200 D_Gain:=100">
+
+    <ros2_control name="${name}" type="system">
+      <hardware>
+        <plugin>dynamixel_hardware/DynamixelHardware</plugin>
+        <param name="usb_port">/dev/ttyUSB0</param>
+        <param name="baud_rate">3000000</param>
+        <param name="use_dummy">${use_dummy}</param>
+        <!-- <param name="use_dummy">true</param> -->
+      </hardware>
+
+      <!-- First finger start -->
+      <joint name="joint_0">
+        <param name="id">0</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <joint name="joint_1">
+        <param name="id">1</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <joint name="joint_2">
+        <param name="id">2</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <joint name="joint_3">
+        <param name="id">3</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <!-- First finger end -->
+
+      <!-- Middle finger start -->
+      <joint name="joint_4">
+        <param name="id">4</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <joint name="joint_5">
+        <param name="id">5</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <joint name="joint_6">
+        <param name="id">6</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <joint name="joint_7">
+        <param name="id">7</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <!-- Middle finger end -->
+
+      <!-- Ring finger start -->
+      <joint name="joint_8">
+        <param name="id">8</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <joint name="joint_9">
+        <param name="id">9</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <joint name="joint_10">
+        <param name="id">10</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <joint name="joint_11">
+        <param name="id">11</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <!-- Ring finger end -->
+
+      <!-- Thumb start -->
+      <joint name="joint_12">
+        <param name="id">12</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <joint name="joint_13">
+        <param name="id">13</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <joint name="joint_14">
+        <param name="id">14</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <joint name="joint_15">
+        <param name="id">15</param>
+        <param name="Position_P_Gain">${P_Gain}</param>
+        <param name="Position_I_Gain">${I_Gain}</param>
+        <param name="Position_D_Gain">${D_Gain}</param>
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <!-- Thumb end -->
+      
+    </ros2_control>
+
+  </xacro:macro>
+
+</robot>

@@ -1,0 +1,68 @@
+<mujoco model="dexterous manipulation 2d">
+  <compiler angle="radian" meshdir="assets" autolimits="true" />
+
+  <option integrator="implicitfast" impratio="10" />
+
+  <include file="scene_only.xml" />
+
+  <asset>
+    <material name="white" rgba="1 1 1 1" />
+    <material name="off_white" rgba="0.901961 0.921569 0.929412 1" />
+    <material name="dark_grey" rgba="0.25 0.25 0.25 1" />
+    <material name="green" rgba="0 1 0 1" />
+    <material name="light_blue" rgba="0.039216 0.541176 0.780392 1" />
+
+  </asset>
+
+  <worldbody>
+    <light name="top" pos="0 0 2" mode="trackcom" />
+
+    <!-- manipuland -->
+    <body name="box_base" pos="0.0 0.0 0.0" quat="1 0 0 0">
+      <body name="box_ghost_x" pos="0.0 0.0 0.0" quat="1 0 0 0">
+        <joint name="box_ghost_joint_x" type="slide" axis="1 0 0" />
+        <inertial mass="1e-10" pos="0.0 0.0 0.0" fullinertia="1e-12 1e-12 1e-12 0 0 0" />
+        <body name="box_ghost_y" pos="0.0 0.0 0.0" quat="1 0 0 0">
+          <joint name="box_ghost_joint_y" type="slide" axis="0 1 0" />
+          <inertial mass="1e-10" pos="0.0 0.0 0.0" fullinertia="1e-12 1e-12 1e-12 0 0 0" />
+          <body name="box" pos="0.0 0.0 0.0" quat="1 0 0 0">
+            <joint name="box_ghost_joint_z" type="hinge" axis="0 0 1" />
+            <inertial mass="1.0" pos="0.0 0.0 0.0" fullinertia="1e-4 1e-4 1e-4 0 0 0" />
+            <geom name="box_visual" type="box" size="0.1 0.1 0.01" material="white" contype="0" conaffinity="0" group="2" />
+            <geom name="box_collision" type="box" size="0.1 0.1 0.01" group="3" margin="0.1" gap="0.1" />
+          </body>
+        </body>
+      </body>
+    </body>
+
+    <!-- manipulators -->
+    <body name="hand_base_0" pos="0.15 0.0 0.0" quat="1 0 0 0">
+      <body name="hand_ghost_x_0" pos="0.0 0.0 0.0" quat="1 0 0 0">
+        <joint name="hand_ghost_joint_x_0" type="slide" axis="1 0 0" />
+        <inertial mass="1e-10" pos="0.0 0.0 0.0" fullinertia="1e-12 1e-12 1e-12 0 0 0" />
+        <body name="hand_0" pos="0.0 0.0 0.0" quat="1 0 0 0">
+          <joint name="hand_ghost_joint_y_0" type="slide" axis="0 1 0" />
+          <inertial mass="0.1" pos="0.0 0.0 0.0" fullinertia="1e-4 1e-4 1e-4 0 0 0" />
+          <geom name="hand_visual_0" type="cylinder" size="0.01 0.01" material="dark_grey" contype="0" conaffinity="0" group="2" />
+          <geom name="hand_collision_0" type="cylinder" size="0.01 0.01" group="3" />
+        </body>
+      </body>
+    </body>
+
+    <body name="hand_base_1" pos="-0.15 0.0 0.0" quat="1 0 0 0">
+      <body name="hand_ghost_x_1" pos="0.0 0.0 0.0" quat="1 0 0 0">
+        <joint name="hand_ghost_joint_x_1" type="slide" axis="1 0 0" />
+        <inertial mass="1e-10" pos="0.0 0.0 0.0" fullinertia="1e-12 1e-12 1e-12 0 0 0" />
+        <body name="hand_1" pos="0.0 0.0 0.0" quat="1 0 0 0">
+          <joint name="hand_ghost_joint_y_1" type="slide" axis="0 1 0" />
+          <inertial mass="0.1" pos="0.0 0.0 0.0" fullinertia="1e-4 1e-4 1e-4 0 0 0" />
+          <geom name="hand_visual_1" type="cylinder" size="0.01 0.01" material="dark_grey" contype="0" conaffinity="0" group="2" />
+          <geom name="hand_collision_1" type="cylinder" size="0.01 0.01" group="3" />
+        </body>
+      </body>
+    </body>
+
+  </worldbody>
+
+</mujoco>
+  

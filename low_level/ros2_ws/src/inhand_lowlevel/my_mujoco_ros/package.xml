@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>my_mujoco_ros</name>
+  <version>0.1.0</version>
+  <description>ROS2 node for loading and simulating MuJoCo models</description>
+
+  <maintainer email="your_email@example.com">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- ROS2 dependencies -->
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>common_msgs</depend>
+
+  <!-- MuJoCo dependencies -->
+  <build_depend>mujoco-py</build_depend>
+  <build_depend>rosidl_typesupport_c</build_depend>
+  <exec_depend>mujoco-py</exec_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <exec_depend>rosidl_typesupport_c</exec_depend>
+
+  <!-- Other dependencies -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

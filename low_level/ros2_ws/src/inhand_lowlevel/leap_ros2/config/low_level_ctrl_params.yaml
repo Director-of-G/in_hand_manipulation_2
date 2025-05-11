@@ -1,0 +1,57 @@
+enable_low_level_ctrl: true
+
+hw_type: "mujoco" # "dummy", "mujoco" or "real"
+
+# Hand type: "leap" or "allegro", to initialize mujoco and sensor params
+# In hardware, only use leap
+# In simulation, this switches between use leap or allegro (load the mujoco_config.yaml in which description pkg)
+hand_type: "allegro"
+
+# Type of algorithm: "ours", "mjpc"
+algo_type: "ours"
+
+# To supress discontinuity in high level trajectory,
+# will shift the newly received trajectory at t, so that
+# its value(t)=ratio*last_value(t)+(1-ratio)*value(t), where
+# last_value(t) refers to the last received trajectory
+high_level_traj_shift_ratio: 0.75
+
+# low level share the same params
+ctrl_params:
+  low_level_frequency: 30     # Hz
+  T_ctrl: 5                   # mpc horizon
+
+  # contact model params
+  model_params:
+    enable_coupling: true      # whether to consider finger coupling in stiffness computation
+
+  # weights
+  lqr_weights:
+    w_q: 0.0                    # Q weight, for jpos tracking (1e-1)
+    w_dq: 0.0                   # Q weight, for jvel tracking
+    w_f: 1.0                    # Q weight, for contact force tracking
+    w_u: 0.1                    # R weight, for jvel regulation (0.5)
+    w_du: 0.0                   # not used
+
+  mpic_params:
+    Kp: 4                       # robot stiffness
+    Kd: 1                       # robot damping
+
+    dq_scale: 1.0               # dq scale (default: 1.0)
+    Qf_scale: 2.0               # Qf scale (default | open_door: 10.0, open_door_hand_left: 5.0, planar_slide: 10.0, planar_rotate: 5.0, planar_rotate_joint_space: 10.0)
+    Qp_scale: 50.0              # Qp scale (default | open_door: 10.0, planar_slide: 10.0,  planar_rotate: 30.0)
+    Qp_ori_scale: 3.0           # Qp orientation scale (default: 1.0)
+
+    Ke_scalar: 200              # 'magnitude' of environment stiffness (default: 200)
+    Qf_scalar: 0.1              # 'magnitude' of force cost matrix (default: 0.1)
+    Qp_scalar: 200              # 'magnitude' of position cost matrix (default: 200)
+    Qp_ori_scalar: 1.0          # 'magnitude' of orientation cost matrix (default: 1.0)
+    Qq_scalar: 20.0             # 'magnitude' of joint cost matrix (default: 20.0)
+    R_scalar: 1.0               # 'magnitude' of control cost matrix (default: 1.0)
+
+    force_lower_bound: 0.5      # threshold for contact detection (default: 0.5)
+    force_upper_bound: 2        # maximum contact force to avoid damage (default: 2)
+
+
+
+debug: false                     # if True, will publish HFMC debug message and print debug info

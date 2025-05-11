@@ -1,0 +1,948 @@
+<sdf version='1.7'>
+  <model name='leap_hand_custom'>
+    <joint name='world2hand' type='fixed'>
+      <pose relative_to='__model__'>0 0 0 3.14159 -0 0</pose>
+      <parent>world</parent>
+      <child>palm_lower</child>
+    </joint>
+    <link name='palm_lower'>
+      <pose relative_to='world2hand'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.237</mass>
+        <inertia>
+          <ixx>0.000354094</ixx>
+          <ixy>-1.193e-06</ixy>
+          <ixz>-2.445e-06</ixz>
+          <iyy>0.000260915</iyy>
+          <iyz>-2.905e-06</iyz>
+          <izz>0.000529257</izz>
+        </inertia>
+      </inertial>
+      <collision name='palm_lower_collision'>
+        <pose>-0.020095 0.025758 -0.034722 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/palm_lower.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='palm_lower_visual'>
+        <pose>-0.020095 0.025758 -0.034722 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/palm_lower.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='palm_lower_visual_1'>
+        <pose>-0.039595 -0.032758 -0.051 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.035 0.115 0.025</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='palm_lower_visual_2'>
+        <pose>-0.075952 -0.058578 -0.051 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.04 0.063 0.025</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_1' type='revolute'>
+      <pose relative_to='palm_lower'>-0.007095 0.023058 -0.018722 1.5708 1.5708 0</pose>
+      <parent>palm_lower</parent>
+      <child>mcp_joint</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-0.314</lower>
+          <upper>2.23</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='mcp_joint'>
+      <pose relative_to='joint_1'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.044</mass>
+        <inertia>
+          <ixx>1.1499e-05</ixx>
+          <ixy>3.049e-06</ixy>
+          <ixz>1.21e-07</ixz>
+          <iyy>7.796e-06</iyy>
+          <iyz>1.12e-07</iyz>
+          <izz>1.4759e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='mcp_joint_collision'>
+        <pose>0.008407 0.007766 0.014657 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/mcp_joint.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='mcp_joint_visual'>
+        <pose>0.008407 0.007766 0.014657 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/mcp_joint.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_0' type='revolute'>
+      <pose relative_to='mcp_joint'>-0.0122 0.0381 0.0145 -1.5708 -0 1.5708</pose>
+      <parent>mcp_joint</parent>
+      <child>pip</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1.047</lower>
+          <upper>1.047</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.003</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='pip'>
+      <pose relative_to='joint_0'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.032</mass>
+        <inertia>
+          <ixx>4.798e-06</ixx>
+          <ixy>1.2e-08</ixy>
+          <ixz>4e-09</ixz>
+          <iyy>2.862e-06</iyy>
+          <iyz>1.1e-08</iyz>
+          <izz>4.234e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='pip_collision'>
+        <pose>0.009643 0.0003 0.000784 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/pip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='pip_visual'>
+        <pose>0.009643 0.0003 0.000784 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/pip.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_2' type='revolute'>
+      <pose relative_to='pip'>0.015 0.0143 -0.013 1.5708 -1.5708 0</pose>
+      <parent>pip</parent>
+      <child>dip</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-0.506</lower>
+          <upper>1.885</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='dip'>
+      <pose relative_to='joint_2'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.037</mass>
+        <inertia>
+          <ixx>5.542e-06</ixx>
+          <ixy>-6.07e-07</ixy>
+          <ixz>-1.7e-08</ixz>
+          <iyy>5.727e-06</iyy>
+          <iyz>-2.3e-08</iyz>
+          <izz>6.682e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='dip_collision'>
+        <pose>0.021133 -0.008432 0.009785 -3.14159 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/dip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='dip_visual'>
+        <pose>0.021133 -0.008432 0.009785 -3.14159 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/dip.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_3' type='revolute'>
+      <pose relative_to='dip'>-0 -0.0361 0.0002 0 -0 0</pose>
+      <parent>dip</parent>
+      <child>fingertip</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-0.366</lower>
+          <upper>2.042</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='fingertip'>
+      <pose relative_to='joint_3'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 -0 0 0 -0 0</pose>
+        <mass>0.016</mass>
+        <inertia>
+          <ixx>3.3681e-06</ixx>
+          <ixy>1.15e-07</ixy>
+          <ixz>1.08e-14</ixz>
+          <iyy>1.5561e-06</iyy>
+          <iyz>7.9488e-14</iyz>
+          <izz>2.8631e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='fingertip_collision'>
+        <pose>0.014986 -0.016914 0.0144 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/fingertip_base_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='fingertip_new_collision_1'>
+        <pose>-0.0075 -0.0552 0.0144 1.5708 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/fingertip_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fingertip_visual'>
+        <pose>0.014986 -0.016914 0.0144 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/fingertip_base_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='fingertip_new_visual_1'>
+        <pose>-0.0075 -0.0552 0.0144 1.5708 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/fingertip_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_12' type='revolute'>
+      <pose relative_to='palm_lower'>-0.069395 -0.001242 -0.021622 -0 1.5708 0</pose>
+      <parent>palm_lower</parent>
+      <child>pip_4</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-0.349</lower>
+          <upper>2.094</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='pip_4'>
+      <pose relative_to='joint_12'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.032</mass>
+        <inertia>
+          <ixx>4.798e-06</ixx>
+          <ixy>1.2e-08</ixy>
+          <ixz>4e-09</ixz>
+          <iyy>2.862e-06</iyy>
+          <iyz>1.1e-08</iyz>
+          <izz>4.234e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='pip_4_collision'>
+        <pose>-0.005357 0.0003 0.000784 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/pip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='pip_4_visual'>
+        <pose>-0.005357 0.0003 0.000784 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/pip.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_13' type='revolute'>
+      <pose relative_to='pip_4'>-0 0.0143 -0.013 1.5708 -1.5708 0</pose>
+      <parent>pip_4</parent>
+      <child>thumb_pip</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-0.47</lower>
+          <upper>2.443</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='thumb_pip'>
+      <pose relative_to='joint_13'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.003</mass>
+        <inertia>
+          <ixx>5.93e-07</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>5.49e-07</iyy>
+          <iyz>0</iyz>
+          <izz>2.24e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='thumb_pip_collision'>
+        <pose>0.011962 -0 -0.015853 1.5708 0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/thumb_pip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='thumb_pip_visual'>
+        <pose>0.011962 -0 -0.015853 1.5708 0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/thumb_pip.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_14' type='revolute'>
+      <pose relative_to='thumb_pip'>0 0.0145 -0.017 -1.5708 0 -0</pose>
+      <parent>thumb_pip</parent>
+      <child>thumb_dip</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1.2</lower>
+          <upper>1.9</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='thumb_dip'>
+      <pose relative_to='joint_14'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.038</mass>
+        <inertia>
+          <ixx>8.474e-06</ixx>
+          <ixy>2.41e-07</ixy>
+          <ixz>2.6e-08</ixz>
+          <iyy>3.841e-06</iyy>
+          <iyz>2.5e-08</iyz>
+          <izz>7.679e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='thumb_dip_collision'>
+        <pose>0.043969 0.057953 -0.008629 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/thumb_dip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='thumb_dip_visual'>
+        <pose>0.043969 0.057953 -0.008629 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/thumb_dip.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_15' type='revolute'>
+      <pose relative_to='thumb_dip'>-0 0.0466 0.0002 0 0 3.14159</pose>
+      <parent>thumb_dip</parent>
+      <child>thumb_fingertip</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1.34</lower>
+          <upper>1.88</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='thumb_fingertip'>
+      <pose relative_to='joint_15'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0 -0 0 -0 0</pose>
+        <mass>0.049</mass>
+        <inertia>
+          <ixx>2.03721e-05</ixx>
+          <ixy>-4.89e-07</ixy>
+          <ixz>-3e-08</ixz>
+          <iyy>4.3361e-06</iyy>
+          <iyz>-9.7e-08</iyz>
+          <izz>1.98451e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='thumb_fingertip_collision'>
+        <pose>0.01206 -0.03576 -0.029093 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/thumb_fingertip_base_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='thumb_fingertip_new_collision_1'>
+        <pose>0 -0.03 -0.0145 -3.14159 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/fingertip_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='thumb_fingertip_visual'>
+        <pose>0.01206 -0.03576 -0.029093 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/thumb_fingertip_base_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='thumb_fingertip_new_visual_1'>
+        <pose>-0.0085 -0.0658 -0.0145 1.5708 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/fingertip_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_5' type='revolute'>
+      <pose relative_to='palm_lower'>-0.007095 -0.022392 -0.018722 1.5708 1.5708 0</pose>
+      <parent>palm_lower</parent>
+      <child>mcp_joint_2</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-0.314</lower>
+          <upper>2.23</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='mcp_joint_2'>
+      <pose relative_to='joint_5'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.044</mass>
+        <inertia>
+          <ixx>1.1499e-05</ixx>
+          <ixy>3.049e-06</ixy>
+          <ixz>1.21e-07</ixz>
+          <iyy>7.796e-06</iyy>
+          <iyz>1.12e-07</iyz>
+          <izz>1.4759e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='mcp_joint_2_collision'>
+        <pose>0.008407 0.007766 0.014657 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/mcp_joint.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='mcp_joint_2_visual'>
+        <pose>0.008407 0.007766 0.014657 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/mcp_joint.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_4' type='revolute'>
+      <pose relative_to='mcp_joint_2'>-0.0122 0.0381 0.0145 -1.5708 -0 1.5708</pose>
+      <parent>mcp_joint_2</parent>
+      <child>pip_2</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1.047</lower>
+          <upper>1.047</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='pip_2'>
+      <pose relative_to='joint_4'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.032</mass>
+        <inertia>
+          <ixx>4.798e-06</ixx>
+          <ixy>1.2e-08</ixy>
+          <ixz>4e-09</ixz>
+          <iyy>2.862e-06</iyy>
+          <iyz>1.1e-08</iyz>
+          <izz>4.234e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='pip_2_collision'>
+        <pose>0.009643 0.0003 0.000784 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/pip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='pip_2_visual'>
+        <pose>0.009643 0.0003 0.000784 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/pip.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_6' type='revolute'>
+      <pose relative_to='pip_2'>0.015 0.0143 -0.013 1.5708 -1.5708 0</pose>
+      <parent>pip_2</parent>
+      <child>dip_2</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-0.506</lower>
+          <upper>1.885</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='dip_2'>
+      <pose relative_to='joint_6'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.037</mass>
+        <inertia>
+          <ixx>5.542e-06</ixx>
+          <ixy>-6.07e-07</ixy>
+          <ixz>-1.7e-08</ixz>
+          <iyy>5.727e-06</iyy>
+          <iyz>-2.3e-08</iyz>
+          <izz>6.682e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='dip_2_collision'>
+        <pose>0.021133 -0.008432 0.009785 -3.14159 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/dip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='dip_2_visual'>
+        <pose>0.021133 -0.008432 0.009785 -3.14159 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/dip.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_7' type='revolute'>
+      <pose relative_to='dip_2'>0 -0.0361 0.0002 0 -0 0</pose>
+      <parent>dip_2</parent>
+      <child>fingertip_2</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-0.366</lower>
+          <upper>2.042</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='fingertip_2'>
+      <pose relative_to='joint_7'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 -0 0 0 -0 0</pose>
+        <mass>0.016</mass>
+        <inertia>
+          <ixx>3.3681e-06</ixx>
+          <ixy>1.15e-07</ixy>
+          <ixz>1.08e-14</ixz>
+          <iyy>1.5561e-06</iyy>
+          <iyz>7.9488e-14</iyz>
+          <izz>2.8631e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='fingertip_2_collision'>
+        <pose>0.014986 -0.016914 0.0144 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/fingertip_base_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='fingertip_2_new_collision_1'>
+        <pose>-0.0075 -0.0552 0.0144 1.5708 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/fingertip_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fingertip_2_visual'>
+        <pose>0.014986 -0.016914 0.0144 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/fingertip_base_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='fingertip_2_new_visual_1'>
+        <pose>-0.0075 -0.0552 0.0144 1.5708 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/fingertip_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_9' type='revolute'>
+      <pose relative_to='palm_lower'>-0.007095 -0.067842 -0.018722 1.5708 1.5708 0</pose>
+      <parent>palm_lower</parent>
+      <child>mcp_joint_3</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-0.314</lower>
+          <upper>2.23</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='mcp_joint_3'>
+      <pose relative_to='joint_9'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.044</mass>
+        <inertia>
+          <ixx>1.1499e-05</ixx>
+          <ixy>3.049e-06</ixy>
+          <ixz>1.21e-07</ixz>
+          <iyy>7.796e-06</iyy>
+          <iyz>1.12e-07</iyz>
+          <izz>1.4759e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='mcp_joint_3_collision'>
+        <pose>0.008407 0.007766 0.014657 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/mcp_joint.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='mcp_joint_3_visual'>
+        <pose>0.008407 0.007766 0.014657 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/mcp_joint.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_8' type='revolute'>
+      <pose relative_to='mcp_joint_3'>-0.0122 0.0381 0.0145 -1.5708 -0 1.5708</pose>
+      <parent>mcp_joint_3</parent>
+      <child>pip_3</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1.047</lower>
+          <upper>1.047</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='pip_3'>
+      <pose relative_to='joint_8'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.032</mass>
+        <inertia>
+          <ixx>4.798e-06</ixx>
+          <ixy>1.2e-08</ixy>
+          <ixz>4e-09</ixz>
+          <iyy>2.862e-06</iyy>
+          <iyz>1.1e-08</iyz>
+          <izz>4.234e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='pip_3_collision'>
+        <pose>0.009643 0.0003 0.000784 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/pip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='pip_3_visual'>
+        <pose>0.009643 0.0003 0.000784 -1.5708 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/pip.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_10' type='revolute'>
+      <pose relative_to='pip_3'>0.015 0.0143 -0.013 1.5708 -1.5708 0</pose>
+      <parent>pip_3</parent>
+      <child>dip_3</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-0.506</lower>
+          <upper>1.885</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='dip_3'>
+      <pose relative_to='joint_10'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.037</mass>
+        <inertia>
+          <ixx>5.542e-06</ixx>
+          <ixy>-6.07e-07</ixy>
+          <ixz>-1.7e-08</ixz>
+          <iyy>5.727e-06</iyy>
+          <iyz>-2.3e-08</iyz>
+          <izz>6.682e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='dip_3_collision'>
+        <pose>0.021133 -0.008432 0.009785 -3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/dip.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='dip_3_visual'>
+        <pose>0.021133 -0.008432 0.009785 -3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/dip.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_11' type='revolute'>
+      <pose relative_to='dip_3'>0 -0.0361 0.0002 0 -0 0</pose>
+      <parent>dip_3</parent>
+      <child>fingertip_3</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-0.366</lower>
+          <upper>2.042</upper>
+          <effort>0.95</effort>
+          <velocity>8.48</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='fingertip_3'>
+      <pose relative_to='joint_11'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 -0 0 0 -0 0</pose>
+        <mass>0.016</mass>
+        <inertia>
+          <ixx>3.3681e-06</ixx>
+          <ixy>1.15e-07</ixy>
+          <ixz>1.08e-14</ixz>
+          <iyy>1.5561e-06</iyy>
+          <iyz>7.9488e-14</iyz>
+          <izz>2.8631e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='fingertip_3_collision'>
+        <pose>0.013286 -0.006114 0.0145 3.14159 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/fingertip_base_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='fingertip_3_new_collision_1'>
+        <pose>-0.0075 -0.0552 0.0144 1.5708 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/fingertip_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='fingertip_3_visual'>
+        <pose>0.014986 -0.016914 0.0144 0 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/fingertip_base_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='fingertip_3_new_visual_1'>
+        <pose>-0.0075 -0.0552 0.0144 1.5708 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://leap_hand_custom_description/meshes/fingertip_tac3d.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

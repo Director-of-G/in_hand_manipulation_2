@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot name="leap_hand_custom" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find leap_hand_custom_description)/urdf/leap_hand_custom.xacro" />
+  <xacro:include filename="$(find leap_hand_custom_description)/urdf/leap_hand_custom.ros2_control.xacro" />
+
+  <link name="world"/>
+
+  <xacro:leap_hand_custom mesh_dir="package://leap_hand_custom_description/meshes/" parent="world">
+    <origin xyz="0 0 0" rpy="${pi} 0 0" />
+  </xacro:leap_hand_custom>
+
+  <xacro:leap_hand_custom_ros2_control name="leap_hand_custom_ros2_control" />
+</robot>

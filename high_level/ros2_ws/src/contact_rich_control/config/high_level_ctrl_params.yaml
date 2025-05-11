@@ -1,11 +1,11 @@
-task_file: leap_3d_slider.yaml
+# task_file: leap_3d_slider.yaml
 # task_file: leap_3d_planar_rotate.yaml
 # task_file: leap_3d_zrot_any_cylinder.yaml
 # task_file: leap_3d_wrist_zrot_any_cylinder.yaml
 # task_file: leap_3d_open_box.yaml
-# task_file: allegro_3d_sphere.yaml
+task_file: allegro_3d_sphere.yaml
 
-hand_type: leap # leap or allegro
+hand_type: allegro # leap or allegro
 
 finger_to_geom_name_map:
   leap:

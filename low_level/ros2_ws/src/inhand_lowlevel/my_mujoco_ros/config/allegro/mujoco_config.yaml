@@ -1,0 +1,38 @@
+mujoco_ros:
+  ros__parameters:
+    # # pub freq
+    object_state_freq: 100
+    contact_state_freq: 100
+    joint_state_freq: 100
+
+    # # panda
+    # model_url: '/home/yongpeng/.mujoco/mujoco_menagerie/franka_emika_panda/scene.xml'  # Replace with the actual model file path
+    # xml_joint_prefix: joint
+    # urdf_joint_prefix: panda_joint
+    # joint_idx_range: [1, 8]
+    # model_init_qpos: [0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785]
+
+    # # iiwa
+    # model_url: '/home/yongpeng/.mujoco/mujoco_menagerie/kuka_iiwa_14/scene.xml'  # Replace with the actual model file path
+    # xml_joint_prefix: joint
+    # urdf_joint_prefix: iiwa_joint_a
+    # joint_idx_range: [1, 8]
+    # model_init_qpos: [0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785]
+
+    # # allegro
+    model_package: 'allegro_hand_description'
+    xml_joint_prefix: joint_
+    urdf_joint_prefix: joint_
+    object_body_name: object
+    joint_idx_range: [0, 16]
+
+    # # model_init_pos (joint_0 ~ joint_16)
+    # # ours
+    model_url: 'urdf/allegro_with_sphere_rpy.xml'
+    model_init_qpos: [0.2, 0.95, 1.0, 1.0, 0.0, 0.6, 1.0, 1.0, -0.2, 0.95, 1.0, 1.0, 0.6, 1.95, 1.0, 1.0]
+    # model_init_qpos: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+    # # mjpc
+    # model_url: 'urdf/allegro_with_sphere_rpy_mjpc.xml'
+    # model_init_qpos: [0.2, 0.95, 1.0, 1.0, 0.0, 0.6, 1.0, 1.0, -0.2, 0.95, 1.0, 1.0, 0.6, 1.95, 1.0, 1.0]
+    # object_init_qpos: [1, 0, 0, 0]

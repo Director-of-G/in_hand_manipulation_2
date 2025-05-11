@@ -1,0 +1,6 @@
+string link_name
+float32[3] force
+float32[3] torque
+float32[3] point
+---
+bool success

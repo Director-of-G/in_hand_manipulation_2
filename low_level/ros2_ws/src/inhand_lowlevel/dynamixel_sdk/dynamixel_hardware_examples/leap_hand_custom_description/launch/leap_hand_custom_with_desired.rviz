@@ -1,0 +1,729 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /RobotModel1
+        - /TF1
+        - /TF1/Status1
+        - /TF1/Frames1
+        - /Wrench1
+        - /Wrench2
+        - /Wrench3
+        - /Wrench4
+        - /Marker1
+        - /RobotModel2
+      Splitter Ratio: 0.6197836399078369
+    Tree Height: 793
+  - Class: rviz_common/Selection
+    Name: Selection
+  - Class: rviz_common/Tool Properties
+    Expanded:
+      - /2D Goal Pose1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: false
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot_description
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        dip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        dip_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        dip_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        finger1_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        finger2_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        finger3_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        fingertip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_2_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_3_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mcp_joint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mcp_joint_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mcp_joint_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        palm_lower:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_dip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_fingertip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_fingertip_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_pip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        camera_color_frame:
+          Value: true
+        camera_color_optical_frame:
+          Value: true
+        camera_depth_frame:
+          Value: true
+        camera_depth_optical_frame:
+          Value: true
+        camera_link:
+          Value: true
+        desired/dip:
+          Value: false
+        desired/dip_2:
+          Value: false
+        desired/dip_3:
+          Value: false
+        desired/finger1_tip_center:
+          Value: false
+        desired/finger2_tip_center:
+          Value: false
+        desired/finger3_tip_center:
+          Value: false
+        desired/fingertip:
+          Value: false
+        desired/fingertip_2:
+          Value: false
+        desired/fingertip_2_new:
+          Value: false
+        desired/fingertip_3:
+          Value: false
+        desired/fingertip_3_new:
+          Value: false
+        desired/fingertip_new:
+          Value: false
+        desired/mcp_joint:
+          Value: false
+        desired/mcp_joint_2:
+          Value: false
+        desired/mcp_joint_3:
+          Value: false
+        desired/palm_lower:
+          Value: false
+        desired/pip:
+          Value: false
+        desired/pip_2:
+          Value: false
+        desired/pip_3:
+          Value: false
+        desired/pip_4:
+          Value: false
+        desired/thumb_dip:
+          Value: false
+        desired/thumb_fingertip:
+          Value: false
+        desired/thumb_fingertip_new:
+          Value: false
+        desired/thumb_pip:
+          Value: false
+        desired/thumb_tip_center:
+          Value: false
+        dip:
+          Value: true
+        dip_2:
+          Value: true
+        dip_3:
+          Value: true
+        fake_world:
+          Value: true
+        finger1_tip_center:
+          Value: true
+        finger2_tip_center:
+          Value: true
+        finger3_tip_center:
+          Value: true
+        fingertip:
+          Value: true
+        fingertip_2:
+          Value: true
+        fingertip_2_new:
+          Value: true
+        fingertip_3:
+          Value: true
+        fingertip_3_new:
+          Value: true
+        fingertip_new:
+          Value: true
+        mcp_joint:
+          Value: true
+        mcp_joint_2:
+          Value: true
+        mcp_joint_3:
+          Value: true
+        object:
+          Value: true
+        palm_lower:
+          Value: true
+        pip:
+          Value: true
+        pip_2:
+          Value: true
+        pip_3:
+          Value: true
+        pip_4:
+          Value: true
+        tag33_frame:
+          Value: true
+        tag34_frame:
+          Value: true
+        thumb_dip:
+          Value: true
+        thumb_fingertip:
+          Value: true
+        thumb_fingertip_new:
+          Value: true
+        thumb_pip:
+          Value: true
+        thumb_tip_center:
+          Value: true
+        world:
+          Value: true
+      Marker Scale: 0.20000000298023224
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+      Tree:
+        world:
+          desired/palm_lower:
+            desired/mcp_joint:
+              desired/pip:
+                desired/dip:
+                  desired/fingertip:
+                    desired/fingertip_new:
+                      desired/finger1_tip_center:
+                        {}
+            desired/mcp_joint_2:
+              desired/pip_2:
+                desired/dip_2:
+                  desired/fingertip_2:
+                    desired/fingertip_2_new:
+                      desired/finger2_tip_center:
+                        {}
+            desired/mcp_joint_3:
+              desired/pip_3:
+                desired/dip_3:
+                  desired/fingertip_3:
+                    desired/fingertip_3_new:
+                      desired/finger3_tip_center:
+                        {}
+            desired/pip_4:
+              desired/thumb_pip:
+                desired/thumb_dip:
+                  desired/thumb_fingertip:
+                    desired/thumb_fingertip_new:
+                      desired/thumb_tip_center:
+                        {}
+          fake_world:
+            camera_link:
+              camera_color_frame:
+                camera_color_optical_frame:
+                  tag33_frame:
+                    object:
+                      {}
+                  tag34_frame:
+                    {}
+              camera_depth_frame:
+                camera_depth_optical_frame:
+                  {}
+          palm_lower:
+            mcp_joint:
+              pip:
+                dip:
+                  fingertip:
+                    fingertip_new:
+                      finger1_tip_center:
+                        {}
+            mcp_joint_2:
+              pip_2:
+                dip_2:
+                  fingertip_2:
+                    fingertip_2_new:
+                      finger2_tip_center:
+                        {}
+            mcp_joint_3:
+              pip_3:
+                dip_3:
+                  fingertip_3:
+                    fingertip_3_new:
+                      finger3_tip_center:
+                        {}
+            pip_4:
+              thumb_pip:
+                thumb_dip:
+                  thumb_fingertip:
+                    thumb_fingertip_new:
+                      thumb_tip_center:
+                        {}
+      Update Interval: 0
+      Value: true
+    - Alpha: 1
+      Arrow Width: 0.03999999910593033
+      Class: rviz_default_plugins/Wrench
+      Enabled: false
+      Force Arrow Scale: 0.20000000298023224
+      Force Color: 204; 51; 51
+      History Length: 1
+      Name: Wrench
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /tac3d_contact_force_0
+      Torque Arrow Scale: 2
+      Torque Color: 204; 204; 51
+      Value: false
+    - Alpha: 1
+      Arrow Width: 0.03999999910593033
+      Class: rviz_default_plugins/Wrench
+      Enabled: false
+      Force Arrow Scale: 0.20000000298023224
+      Force Color: 204; 51; 51
+      History Length: 1
+      Name: Wrench
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /tac3d_contact_force_1
+      Torque Arrow Scale: 2
+      Torque Color: 204; 204; 51
+      Value: false
+    - Alpha: 1
+      Arrow Width: 0.03999999910593033
+      Class: rviz_default_plugins/Wrench
+      Enabled: false
+      Force Arrow Scale: 0.20000000298023224
+      Force Color: 204; 51; 51
+      History Length: 1
+      Name: Wrench
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /tac3d_contact_force_2
+      Torque Arrow Scale: 2
+      Torque Color: 204; 204; 51
+      Value: false
+    - Alpha: 1
+      Arrow Width: 0.03999999910593033
+      Class: rviz_default_plugins/Wrench
+      Enabled: false
+      Force Arrow Scale: 0.20000000298023224
+      Force Color: 204; 51; 51
+      History Length: 1
+      Name: Wrench
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /tac3d_contact_force_3
+      Torque Arrow Scale: 2
+      Torque Color: 204; 204; 51
+      Value: false
+    - Class: rviz_default_plugins/Marker
+      Enabled: false
+      Name: Marker
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /visualization_marker
+      Value: false
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        "": true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /real_contact_force_vis
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        "": true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /desired_contact_force_vis
+      Value: true
+    - Alpha: 0.5
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: false
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot_description
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        dip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        dip_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        dip_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        finger1_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        finger2_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        finger3_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        fingertip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_2_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_3_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fingertip_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mcp_joint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mcp_joint_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mcp_joint_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        palm_lower:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pip_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_dip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_fingertip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_fingertip_new:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_pip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thumb_tip_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      TF Prefix: desired
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /goal_pose
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /clicked_point
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 0.20976853370666504
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 0.04511338099837303
+        Y: 0.03695942088961601
+        Z: 0.01640664041042328
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.1747962087392807
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 6.233283996582031
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1022
+  Hide Left Dock: false
+  Hide Right Dock: true
+  QMainWindow State: 000000ff00000000fd000000040000000000000289000003a4fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000003a4000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000002f4fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d000002f4000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004420000003efc0100000002fb0000000800540069006d00650100000000000004420000000000000000fb0000000800540069006d00650100000000000004500000000000000000000004bb000003a400000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: true
+  Width: 1866
+  X: 261
+  Y: 320

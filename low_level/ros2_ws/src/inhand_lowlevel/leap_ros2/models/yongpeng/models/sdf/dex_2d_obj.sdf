@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+
+  <!-- world->box_ghost_x->box_ghost_y->box -->
+  <model name="box_2d">
+    <!-- for sdf2urdf only -->
+    <!-- <link name="world" /> -->
+
+    <!-- Ghost body of negligible mass. -->
+    <link name="box_ghost_x">
+      <inertial>
+        <mass>1.0e-10</mass>
+        <inertia>
+          <ixx>1.0e-12</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.0e-12</iyy>
+          <iyz>0</iyz>
+          <izz>1.0e-12</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <link name="box_ghost_y">
+      <inertial>
+        <mass>1.0e-10</mass>
+        <inertia>
+          <ixx>1.0e-12</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.0e-12</iyy>
+          <iyz>0</iyz>
+          <izz>1.0e-12</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <joint name="box_ghost_joint_x" type="prismatic">
+    <!-- <joint name="box_ghost_joint_x" type="fixed"> -->
+      <parent>world</parent>
+      <child>box_ghost_x</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <effort>0</effort>
+        </limit>
+        <dynamics>
+          <!-- TODO(yongpeng): what does the friction mean here, could we set it to 0? -->
+          <friction>3</friction>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <joint name="box_ghost_joint_y" type="prismatic">
+    <!-- <joint name="box_ghost_joint_y" type="fixed"> -->
+      <parent>box_ghost_x</parent>
+      <child>box_ghost_y</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>0</effort>
+        </limit>
+        <dynamics>
+          <!-- TODO(yongpeng): what does the friction mean here, could we set it to 0? -->
+          <friction>3</friction>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <joint name="box_ghost_joint_z" type="revolute">
+    <!-- <joint name="box_ghost_joint_z" type="fixed"> -->
+      <parent>box_ghost_y</parent>
+      <child>box</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>0</effort>
+        </limit>
+        <dynamics>
+          <!-- TODO(yongpeng): what does the friction mean here, could we set it to 0? -->
+          <friction>0.1</friction>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="box">
+      <pose>0 0 0 0 0 0 </pose>
+      <inertial>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>3.5e-3</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3.5e-3</iyy>
+          <iyz>0</iyz>
+          <izz>7e-3</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="box_visual">
+        <geometry>
+          <box>
+            <size> 0.2 0.2 0.02 </size>
+          </box>
+        </geometry>
+        <material>
+          <diffuse> 1.0 1.0 1.0 1.0 </diffuse>
+        </material>
+      </visual>
+
+      <collision name="box_collision">
+        <geometry>
+          <box>
+            <size> 0.2 0.2 0.02 </size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+
+    </link>
+  </model>
+</sdf>

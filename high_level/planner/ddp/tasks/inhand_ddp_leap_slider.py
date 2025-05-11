@@ -952,7 +952,6 @@ def load_pinocchio_model():
     sdf_url = os.path.join(SDF_PATH, "leap_3d_4finger_tac3d_simple_pinocchio.sdf")
     pin_model, _, collision_model, _ = pin.buildModelsFromSdf(
         filename=sdf_url,
-        # package_dirs=os.path.join(DRAKE_HOME, "manipulation/models", "leap_hand_description/urdf/leap_hand/mesh/simple_obj")
         package_dirs=os.path.join(MODEL_PATH, "migrate_from_drake", "leap_hand_description/urdf/leap_hand/mesh/simple_obj")
     )
     # collision_model.addCollisionPair(pin.CollisionPair(0, 2))

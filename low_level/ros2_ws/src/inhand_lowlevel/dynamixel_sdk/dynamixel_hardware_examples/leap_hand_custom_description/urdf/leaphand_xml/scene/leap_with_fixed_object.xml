@@ -1,0 +1,18 @@
+<mujoco model="my_scene">
+    <!-- Include the Leap Hand model -->
+    <include file="./leaphand_aligned_mujoco.xml"/>
+
+    <statistic center="0 0 0.1" extent=".3"/>
+
+    <!-- Define the world body -->
+    <worldbody>
+        <!-- Define the manipulated object with fixed joints, e.g., a ball -->
+        <body name="ball" pos="0.03 -0.038 0.1396776" euler="0 0 0" >
+            <inertial pos="0 0 0" mass="0.1" diaginertia="0.000144 0.000144 0.000144" />
+            <geom type="sphere" size="0.06" rgba="0.1 0.5 0.5 0.8" condim="6" priority="1" friction="0.7 0.002 0.002" />
+            <geom type="box" pos="0 0 0.06" size="0.01 0.01 0.001" rgba="0.6 0.2 0.2 0.9" contype="0" conaffinity="0" />
+        </body>
+    </worldbody>
+
+    <!-- Define actuators, sensors, or additional elements here -->
+</mujoco>
