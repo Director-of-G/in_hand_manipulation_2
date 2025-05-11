@@ -1,0 +1,7 @@
+numpy
+scipy
+cvxpy
+parse
+ruamel
+meshcat
+IPython
