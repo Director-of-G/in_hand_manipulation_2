@@ -99,3 +99,26 @@ The following instructions has been tested on an empty Ubuntu 20.04 system and P
     - Turn ON the SDF option when configuring Pinocchio. Add `-DBUILD_WITH_SDF_SUPPORT=ON` when running `cmake ..`
     - These steps have not been tested on a new system, and you might encounter problems. Feel free to open an issue
 
+### (Low-Level) Motion-Contact Tracker
+
+Coming soon
+
+### Run the Framework with ROS2 and MuJoCo
+
+Coming soon
+
+### Citation
+
+Please cite our paper if you find it helpful :)
+
+```
+misc{jiang2025robustmodelbasedinhandmanipulation,
+      title={Robust Model-Based In-Hand Manipulation with Integrated Real-Time Motion-Contact Planning and Tracking}, 
+      author={Yongpeng Jiang and Mingrui Yu and Xinghao Zhu and Masayoshi Tomizuka and Xiang Li},
+      year={2025},
+      eprint={2505.04978},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2505.04978}, 
+}
+```
